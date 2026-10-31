@@ -122,6 +122,8 @@ A coleta de previsões do tempo precisa de `config_local.json`, criado a partir 
 
 `decidir_margens.py` gera três opções de margem de segurança e uma ficha por dia em `resultados/planejamento/`. As margens de segurança usam os erros dos últimos 60 dias conhecidos em cada sexta-feira. A ficha reúne calendário, cardápio, previsão do tempo, histórico, dias parecidos e pontos de atenção. O artefato não escolhe a opção.
 
+`gerar_valor_potencial.py` gera, em `resultados_locais/`, as tabelas e figuras com valores em reais. A pasta e o `config_local.json` ficam fora do Git.
+
 ## Avaliação dos cenários
 
 - A cada sexta-feira, os modelos aprendem só com dias anteriores. `testar_modelagem.py` embaralha o futuro e exige previsão idêntica.

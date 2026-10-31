@@ -8,3 +8,4 @@ catboost_info/
 # Localizacao da instituicao, mantida fora do repositorio
 config_local.json
 
+resultados_locais/

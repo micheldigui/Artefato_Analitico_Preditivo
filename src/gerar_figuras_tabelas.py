@@ -19,6 +19,7 @@ import nbformat as nbf
 import numpy as np
 import pandas as pd
 
+from modelagem import CALENDARIO, CAMPEAO, CARDAPIO, CENARIO_CAMPEAO, CENARIOS, CLIMA_PREVISTO, HISTORICO, HISTORICO_CAMPEAO, LIMITES_ALVO, arredondar_refeicoes, construir_modelo, dados_de_treino, matriz, prever_serie
 from nomes import EVENTOS, HISTORICOS, JANELAS, MODELOS as ALGORITMOS, PREPAROS, PROTEINAS, TRATAMENTOS, rotulo
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -774,6 +775,225 @@ def diagramas():
     salvar(fig, "diagrama_validacao_semanal", "Validação semana a semana: em cada sexta-feira, o modelo aprende só com o passado")
 
 
+def figuras_complementares(d):
+    """Pecas pedidas pela dissertacao. Ficam no fim para manter a numeracao anterior."""
+    r = d["relativo"][d["relativo"]["data"] <= CORTE]
+    faixas, nomes = [0, 24, 27, 30, 33, 50], ["Até 24 °C", "24 a 27 °C", "27 a 30 °C", "30 a 33 °C", "33 °C ou mais"]
+    q = r.dropna(subset=["oraculo_temp_max"])
+    v = q.groupby(pd.cut(q["oraculo_temp_max"], faixas, labels=nomes), observed=False)["alvo_relativo"].agg(["size", "median"])
+    fig, ax = plt.subplots(figsize=(8.5, 3.2))
+    barras_a_partir_do_tipico(ax, [f"{n} ({c} dias)" for n, c in zip(nomes, v["size"])], v["median"].to_numpy())
+    fig.tight_layout()
+    salvar(fig, "temperatura_e_consumo", "Consumo comparado à referência por faixa de temperatura máxima (até 2025)")
+
+    serie = d["base"][(d["base"]["data"] <= CORTE) & d["base"]["usar_no_treino"]]["consumo"].to_numpy(float)
+    defasagens_acf = np.arange(1, 21)
+    acf = np.array([np.corrcoef(serie[:-k], serie[k:])[0, 1] for k in defasagens_acf])
+    completa = np.r_[1.0, acf]
+    pacf = np.array([np.linalg.solve(np.array([[completa[abs(i - j)] for j in range(k)] for i in range(k)]), completa[1:k + 1])[-1] for k in defasagens_acf])
+    fig, eixos = plt.subplots(1, 2, figsize=(11, 3.6), sharey=True)
+    for ax, valores, titulo in ((eixos[0], acf, "Relação total com o consumo passado"), (eixos[1], pacf, "Relação própria, descontados os dias intermediários")):
+        ax.bar(defasagens_acf, valores, width=0.7, color=[HUMANO if k % 5 == 0 else ARTEFATO for k in defasagens_acf])
+        ax.axhline(0, color=TEXTO2, linewidth=1)
+        ax.set_ylim(-0.25, 1)
+        ax.set_yticks([0, 0.5, 1], ["0\nsem relação", "0,5\nmoderada", "1\nandam juntos"])
+        ax.set_xticks([1, 5, 10, 15, 20])
+        ax.set_title(titulo, fontsize=10, color=TEXTO2)
+    eixos[0].set_ylabel("Correlação")
+    fig.supxlabel("Dias de serviço antes (em laranja, o mesmo dia da semana)", fontsize=10, color=TEXTO2)
+    fig.tight_layout()
+    salvar(fig, "autocorrelacao", "Quanto o consumo de um dia se relaciona com o consumo de dias anteriores (até 2025)")
+    tabela(pd.DataFrame({"Dias de serviço antes": defasagens_acf, "Relação total": acf, "Relação própria": pacf}).round(3), "autocorrelacao", "Autocorrelação do consumo até 2025")
+
+    colunas = CENARIOS[CENARIO_CAMPEAO]
+    origem = pd.Timestamp("2025-01-01")
+    fig, eixos = plt.subplots(1, 2, figsize=(12.5, 4.4))
+    linhas = []
+    for ax, janela in zip(eixos, ("t1", "t2")):
+        gold = d[janela]
+        treino = dados_de_treino(gold, origem, colunas, 12)
+        alvo = gold[(gold["data"] >= origem) & (gold["data"] <= CORTE) & gold["consumo"].notna() & gold["tratamento"].isin(["normal", "previsivel_calendario", "alto_mantido"])]
+        modelos = [construir_modelo(n) for n in ("catboost", "vizinhos")]
+        for modelo in modelos:
+            modelo.fit(matriz(treino, colunas), treino["alvo_relativo"].clip(*LIMITES_ALVO))
+        def erro(x):
+            previsao = (modelos[0].predict(x) + modelos[1].predict(x) + 1) / 3 * alvo["nivel_base"].to_numpy()
+            return np.abs(previsao - alvo["consumo"].to_numpy()).mean()
+        x = matriz(alvo, colunas)
+        base_erro = erro(x)
+        gerador = np.random.default_rng(42)
+        ganho = {}
+        for c in colunas:
+            medidas = []
+            for _ in range(20):
+                embaralhado = x.copy()
+                embaralhado[c] = gerador.permutation(embaralhado[c].to_numpy())
+                medidas.append(erro(embaralhado) - base_erro)
+            ganho[c] = np.mean(medidas)
+        ordem = sorted(ganho, key=ganho.get, reverse=True)
+        linhas += [{"Decisão": JANELAS[janela], "Variável": rotulo(c), "Aumento do erro (refeições por dia)": round(ganho[c], 2)} for c in ordem]
+        barras_horizontais(ax, [quebrar(rotulo(c), 34) for c in ordem[:10]], [ganho[c] for c in ordem[:10]], ARTEFATO, "{:.2f}")
+        ax.set_title(JANELAS[janela], fontsize=10, color=TEXTO2)
+        ax.set_xlabel("Quanto o erro aumenta sem esta informação (refeições por dia)")
+    fig.tight_layout()
+    salvar(fig, "importancia_das_informacoes", "As 10 informações mais importantes para o comitê: treino até 2024 e erro medido em 2025, embaralhando uma informação de cada vez")
+    tabela(pd.DataFrame(linhas), "importancia_das_informacoes", "Importância das informações para o comitê, com treino até 2024 e medição em 2025")
+
+    p = pd.read_parquet(MODELOS / "previsoes_janelas_treino.parquet")
+    p = p[(p["modelo"] == CAMPEAO) & (p["janela_treino"] == HISTORICO_CAMPEAO) & (p["periodo"] == "prova_2026") & p["regular"] & p["consumo"].notna()]
+    extras = []
+    for janela in ("t1", "t2"):
+        origens = sorted(d[janela].loc[d[janela]["data"] >= "2026-01-01", "origem"].unique())
+        serie = prever_serie(d[janela], origens, CENARIOS["S_clima_perfeito"], CAMPEAO, 12)
+        extras.append(d[janela].loc[serie.index, ["data", "consumo"]].assign(janela=janela, cenario="S_clima_perfeito", previsao=arredondar_refeicoes(serie)))
+    p = pd.concat([p, pd.concat(extras)], ignore_index=True)
+    linhas = []
+    fig, eixos = plt.subplots(1, 2, figsize=(11, 3))
+    for ax, janela, cenarios in ((eixos[0], "t1", {"C2": "Sem clima", "C3": "Com previsão do tempo", "S_clima_perfeito": "Com o clima que de fato ocorreu"}), (eixos[1], "t2", {"C2": "Sem clima", "S_clima_perfeito": "Com o clima que de fato ocorreu"})):
+        q = p[p["janela"] == janela].pivot(index="data", columns="cenario", values="previsao")[list(cenarios)].dropna()
+        consumo = p[p["janela"] == janela].drop_duplicates("data").set_index("data")["consumo"].reindex(q.index)
+        erros = [(q[c] - consumo).abs().mean() for c in cenarios]
+        barras_horizontais(ax, list(cenarios.values()), erros, ARTEFATO, "{:.1f}")
+        ax.set_title(JANELAS[janela], fontsize=10, color=TEXTO2)
+        ax.set_xlabel(f"Erro médio em {len(q)} dias de 2026 (refeições por dia)")
+        linhas += [{"Decisão": JANELAS[janela], "Informação de clima": n, "Datas": len(q), "Erro médio": round(e, 1)} for n, e in zip(cenarios.values(), erros)]
+    fig.tight_layout()
+    salvar(fig, "efeito_do_clima", "Erro do comitê com e sem clima em 2026, sem dias atípicos. O clima que de fato ocorreu não seria conhecido na sexta-feira e mostra o limite do ganho possível. Nas compras, ainda não há histórico suficiente de previsões guardadas")
+    tabela(pd.DataFrame(linhas), "efeito_do_clima", "Erro do comitê com e sem informação de clima em 2026")
+
+    prova = d["final"][(d["final"]["periodo"] == "prova_2026") & (d["final"]["universo"] == "sem_atipicos")]
+    ordem = ["consumo_tipico", "H", "C1", "C2"]
+    fig, ax = plt.subplots(figsize=(8.5, 3.6))
+    posicoes = np.arange(len(ordem))
+    for deslocamento, janela, cor in ((-0.2, "t1", ARTEFATO), (0.2, "t2", HUMANO)):
+        v = prova[prova["janela"] == janela].set_index("alternativa").reindex(ordem)["mae"]
+        ax.bar(posicoes + deslocamento, v, 0.38, color=cor, label=JANELAS[janela])
+        for x_p, valor in zip(posicoes + deslocamento, v):
+            ax.text(x_p, valor, f"{valor:.1f}".replace(".", ","), ha="center", va="bottom", color=TEXTO2, fontsize=9)
+    ax.set_xticks(posicoes, [quebrar(NOMES_CENARIOS[o], 18) for o in ordem])
+    ax.set_ylabel("Erro médio (refeições por dia)")
+    ax.legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1))
+    fig.tight_layout()
+    salvar(fig, "compras_e_preparo", "Erro médio em 2026 no preparo e nas compras, por informação usada, sem dias atípicos")
+
+    x = d["preparo"][(d["preparo"]["data"] >= "2026-01-01") & d["preparo"]["consumo"].notna() & d["preparo"]["regular"] & d["preparo"]["plano"].notna()]
+    pesos = np.arange(0, 101, 10)
+    erros = [(arredondar_refeicoes(p_ / 100 * x["previsao"] + (1 - p_ / 100) * x["plano"]) - x["consumo"]).abs().mean() for p_ in pesos]
+    fig, ax = plt.subplots(figsize=(8.5, 3.6))
+    ax.plot(pesos, erros, color=COMBINACAO, linewidth=2, marker="o", markersize=7, label="Peso fixo o ano inteiro")
+    ax.axhline((x["combinacao"] - x["consumo"]).abs().mean(), color=TEXTO2, linestyle="--", linewidth=1, label="Híbrido usado: peso ajustado a cada semana")
+    for p_, e in zip(pesos[::2], erros[::2]):
+        ax.text(p_, e + 0.25, f"{e:.1f}".replace(".", ","), ha="center", color=TEXTO2, fontsize=9)
+    ax.set_xticks(pesos, [f"{p_}%" for p_ in pesos])
+    ax.set_xlabel("Peso do artefato (o restante é do quantitativo)")
+    ax.set_ylabel("Erro médio (refeições por dia)")
+    ax.legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1))
+    fig.tight_layout()
+    salvar(fig, "fronteira_do_hibrido", "Erro em 2026 conforme o peso do artefato no híbrido, sem dias atípicos. A curva é descritiva: o melhor peso só é conhecido depois")
+    tabela(pd.DataFrame({"Peso do artefato (%)": pesos, "Erro médio": np.round(erros, 2)}), "fronteira_do_hibrido", "Erro em 2026 conforme o peso do artefato no híbrido")
+
+    fv = d["folgas"][(d["folgas"]["universo"] == "sem_atipicos") & (d["folgas"]["decisao"] == "preparo")].set_index("opcao")
+    hibrido = x["combinacao"] - x["consumo"]
+    nomes_op = [QUANTITATIVO, "Artefato sem margem", "Artefato com margem moderada", "Artefato com margem alta", NOME_HIBRIDO]
+    chaves = ["nutricionista", "sem_folga", "moderada", "alta"]
+    dias_deficit = [fv.loc[c, "dias_a_menos_pct"] for c in chaves] + [(hibrido < 0).mean() * 100]
+    excesso_dia = [fv.loc[c, "a_mais"] / fv.loc[c, "dias"] for c in chaves] + [hibrido.clip(lower=0).sum() / len(x)]
+    fig, eixos = plt.subplots(1, 2, figsize=(12, 3.6), sharey=True)
+    cores = [HUMANO, ARTEFATO, ARTEFATO, ARTEFATO, COMBINACAO]
+    barras_horizontais(eixos[0], [quebrar(n, 30) for n in nomes_op], dias_deficit, cores, "{:.0f}%")
+    barras_horizontais(eixos[1], [quebrar(n, 30) for n in nomes_op], excesso_dia, cores, "{:.0f}")
+    eixos[1].invert_yaxis()
+    eixos[0].set_xlabel("Dias com déficit potencial (%)")
+    eixos[1].set_xlabel("Excesso potencial médio (refeições por dia)")
+    fig.tight_layout()
+    salvar(fig, "frequencia_de_deficit_e_excesso", "Frequência de déficit potencial e excesso potencial médio por opção de preparo em 2026, sem dias atípicos")
+
+    todos = d["preparo"][(d["preparo"]["data"] >= "2026-01-01") & d["preparo"]["consumo"].notna() & d["preparo"]["plano"].notna()].assign(mes=lambda t_: t_["data"].dt.strftime("%m/%Y"))
+    cols = {QUANTITATIVO: ("plano", HUMANO, "-"), NOME_ARTEFATO: ("previsao", ARTEFATO, "-"), NOME_HIBRIDO: ("combinacao", COMBINACAO, "--")}
+    fig, eixos = plt.subplots(1, 2, figsize=(12, 3.8), sharex=True)
+    linhas = []
+    for mes, g in todos.groupby("mes", sort=False):
+        linha = {"Mês": mes, "Datas": len(g)}
+        for n, (c, _, _) in cols.items():
+            e = g[c] - g["consumo"]
+            linha[f"Erro médio: {n}"] = round(e.abs().mean(), 1)
+            linha[f"Erro com peso nos grandes desvios: {n}"] = round(np.sqrt((e ** 2).mean()), 1)
+        linhas.append(linha)
+    t_mes = pd.DataFrame(linhas)
+    for ax, prefixo, rotulo_y in ((eixos[0], "Erro médio", "Erro médio (refeições por dia)"), (eixos[1], "Erro com peso nos grandes desvios", "Erro com peso nos grandes desvios")):
+        for n, (_, cor, traco) in cols.items():
+            ax.plot(t_mes["Mês"], t_mes[f"{prefixo}: {n}"], color=cor, linestyle=traco, linewidth=2, marker="o", markersize=6, label=n)
+        ax.set_ylabel(rotulo_y)
+        ax.tick_params(axis="x", labelsize=8)
+    fig.legend(*eixos[0].get_legend_handles_labels(), loc="lower center", ncol=2)
+    fig.tight_layout(rect=(0, 0.13, 1, 1))
+    salvar(fig, "mae_e_rmse_por_mes", "Erro médio (MAE) e erro com peso nos grandes desvios (RMSE) por mês em 2026, com todos os dias")
+    tabela(t_mes, "mae_e_rmse_por_mes", "MAE e RMSE por mês em 2026, com todos os dias")
+
+    so = pd.read_csv(RAIZ / "dados" / "referencia_dissertacao" / "setembro_outubro.csv", sep=";", parse_dates=["data"]).merge(d["preparo"][["data", "previsao", "combinacao"]], on="data", how="left")
+    reg = so[(so["status_qualidade"] == "REGULAR") & so["consumo"].notna()]
+    opcoes = {QUANTITATIVO: "nutricionista", NOME_ARTEFATO: "previsao", NOME_HIBRIDO: "combinacao"}
+    fig, ax = plt.subplots(figsize=(8.5, 3.8))
+    posicoes = np.arange(3)
+    for deslocamento, sinal, cor, nome in ((-0.2, 1, ARTEFATO, "Excesso potencial"), (0.2, -1, HUMANO, "Déficit potencial")):
+        valores = [(sinal * (reg[c] - reg["consumo"])).clip(lower=0).sum() for c in opcoes.values()]
+        ax.bar(posicoes + deslocamento, valores, 0.38, color=cor, label=nome)
+        for x_p, valor in zip(posicoes + deslocamento, valores):
+            ax.text(x_p, valor, f"{valor:.0f}", ha="center", va="bottom", color=TEXTO2, fontsize=9)
+    ax.set_xticks(posicoes, [quebrar(n, 28) for n in opcoes], fontsize=9)
+    ax.set_ylabel(f"Refeições somadas em {len(reg)} dias regulares")
+    ax.legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1))
+    fig.tight_layout()
+    salvar(fig, "balanco_dias_regulares", f"Excesso potencial e déficit potencial nos {len(reg)} dias regulares de setembro e outubro de 2026")
+
+    b = d["base"][d["base"]["data"].dt.dayofweek < 5]
+    v = b.pivot_table(index=b["data"].dt.dayofweek, columns="ano", values="consumo", aggfunc="mean")
+    fig, ax = plt.subplots(figsize=(9, 3.8))
+    tons = {2023: "#c9c8c1", 2024: "#a6c8ee", 2025: "#5c9ee4", 2026: ARTEFATO}
+    for i, ano in enumerate(v.columns):
+        ax.bar(np.arange(5) + (i - 1.5) * 0.2, v[ano], 0.18, color=tons[ano], label=str(ano))
+    ax.set_xticks(range(5), ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"])
+    ax.set_ylabel("Refeições por dia, em média")
+    ax.legend(ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1))
+    fig.tight_layout()
+    salvar(fig, "perfil_semanal_por_ano", "Consumo médio por dia da semana em cada ano. O ano de 2026 vai até outubro")
+
+    g1 = d["t1"]
+    avaliacao = {2023: "Só histórico", 2024: "Escolha do comitê", 2025: "Escolha do comitê", 2026: "Prova"}
+    tabela(pd.DataFrame([{"Ano": ano, "Datas com consumo": int(g["consumo"].notna().sum()), "Datas usadas para aprender": int(g["usar_no_treino"].sum()), "Datas fora do aprendizado": int((g["consumo"].notna() & ~g["usar_no_treino"]).sum()), "Papel na avaliação": avaliacao[ano]} for ano, g in g1.groupby("ano")]), "base_e_conjuntos", "Base histórica e conjuntos de avaliação na decisão de preparo")
+
+    grupos = (("Consumo recente", HISTORICO), ("Calendário", CALENDARIO), ("Cardápio", CARDAPIO), ("Previsão do tempo", CLIMA_PREVISTO))
+    tabela(pd.DataFrame([{"Grupo": g, "Informação": rotulo(c)} for g, cs in grupos for c in cs]), "grupos_de_informacoes", "Grupos de informações do artefato")
+    familias = {"Lineares": "OLS, Ridge, Lasso, ElasticNet, Huber", "Por semelhança": "KNN (usado no comitê)", "Margem": "SVR", "Bagging": "RandomForest, ExtraTrees", "Boosting": "GradientBoosting, HistGB, LightGBM, XGBoost, CatBoost (usado no comitê)", "Redes neurais": "MLP"}
+    tabela(pd.DataFrame({"Família": familias.keys(), "Algoritmos testados": familias.values()}), "familias_de_modelos", "Famílias de modelos testadas no torneio")
+    pastas = []
+    for pasta in sorted(p_ for p_ in (RAIZ / "dados" / "bronze").iterdir() if p_.is_dir() and p_.name not in ("financeiro", "producao")):
+        arquivos = list(pasta.glob("*.csv"))
+        pastas.append({"Fonte": pasta.name, "Arquivos": len(arquivos), "Linhas": sum(max(len(a.read_bytes().splitlines()) - 1, 0) for a in arquivos)})
+    tabela(pd.DataFrame(pastas), "ingestao_bronze", "Arquivos e linhas das fontes na camada Bronze")
+
+    AZ, VD, LJ, CZ = "#dbe9fa", "#d4f1e6", "#fde3d8", "#efeeea"
+    fig, ax = plt.subplots(figsize=(12, 2.1))
+    pecas = [("Fontes", "CSVs do restaurante\ne API de clima", CZ), ("Pipeline", "Bronze, Silver\ne Gold em\narquivos locais", AZ), ("Modelos", "Treino semanal\ndo comitê", VD), ("Saídas", "Previsões, margens\ne fichas por dia", LJ), ("Aplicação", "Streamlit lê as\nsaídas e mostra\nas opções", LJ)]
+    for i, (titulo, texto, cor) in enumerate(pecas):
+        caixa(ax, i * 2.5, 0, 2.05, 1.4, titulo, texto, cor)
+        if i:
+            seta(ax, i * 2.5 - 0.45, 0.7, i * 2.5, 0.7)
+    ax.set_xlim(-0.1, 12.4); ax.set_ylim(-0.1, 1.5); ax.axis("off")
+    salvar(fig, "diagrama_arquitetura", "Arquitetura do artefato, das fontes de dados à aplicação")
+
+    fig, ax = plt.subplots(figsize=(12, 3))
+    passos = [("1. Atualizar", "Novo consumo e\ncalendário", CZ), ("2. Prever", "Comitê prevê\npreparo e compras", VD), ("3. Contextualizar", "Margens, clima,\ncardápio e alertas", AZ), ("4. Decidir", "Nutricionista e\ngestora escolhem", LJ), ("5. Servir", "Consumo é\nregistrado", CZ)]
+    for i, (titulo, texto, cor) in enumerate(passos):
+        caixa(ax, i * 2.5, 0.7, 2.05, 1.2, titulo, texto, cor)
+        if i:
+            seta(ax, i * 2.5 - 0.45, 1.3, i * 2.5, 1.3)
+    ax.annotate("", xy=(1.02, 0.7), xytext=(11.08, 0.7), arrowprops={"arrowstyle": "-|>", "color": TEXTO2, "linewidth": 1.2, "connectionstyle": "bar,fraction=-0.04"})
+    ax.text(6.05, 0.08, "Toda sexta-feira o ciclo recomeça", ha="center", fontsize=9, color=TEXTO2)
+    ax.set_xlim(-0.1, 12.2); ax.set_ylim(0, 2); ax.axis("off")
+    salvar(fig, "diagrama_fluxo_operacional", "Fluxo operacional semanal: o artefato prevê e informa; a decisão é da nutricionista e da gestora")
+
+
 def escrever_lista():
     linhas = ["# Figuras e tabelas para a dissertação", "", "Figuras a 300 DPI, sem título na imagem; as legendas abaixo são sugestões. Tabelas em CSV com separador `;` e decimal com vírgula.", ""]
     for tipo, titulo in (("Figura", "Figuras"), ("Tabela", "Tabelas")):
@@ -800,6 +1020,7 @@ def main():
     figuras_resultados(d)
     figuras_detalhes(d)
     diagramas()
+    figuras_complementares(d)
     escrever_lista()
     print(sum(t == "Figura" for t, *_ in lista), "figuras e", sum(t == "Tabela" for t, *_ in lista), "tabelas")
 

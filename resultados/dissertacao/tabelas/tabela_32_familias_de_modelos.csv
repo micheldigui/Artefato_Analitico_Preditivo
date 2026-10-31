@@ -1,0 +1,7 @@
+﻿Família;Algoritmos testados
+Lineares;OLS, Ridge, Lasso, ElasticNet, Huber
+Por semelhança;KNN (usado no comitê)
+Margem;SVR
+Bagging;RandomForest, ExtraTrees
+Boosting;GradientBoosting, HistGB, LightGBM, XGBoost, CatBoost (usado no comitê)
+Redes neurais;MLP

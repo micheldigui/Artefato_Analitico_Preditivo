@@ -43,6 +43,18 @@ Figuras a 300 DPI, sem título na imagem; as legendas abaixo são sugestões. Ta
 | 35 | `figura_35_diagrama_fluxo_do_artefato.png` | Fluxo do artefato, dos dados brutos à decisão da nutricionista e da gestora |
 | 36 | `figura_36_diagrama_cenarios.png` | Cenários do artefato: cada um acrescenta uma fonte de dados, e o artefato usa o mais completo disponível na semana |
 | 37 | `figura_37_diagrama_validacao_semanal.png` | Validação semana a semana: em cada sexta-feira, o modelo aprende só com o passado |
+| 38 | `figura_38_temperatura_e_consumo.png` | Consumo comparado à referência por faixa de temperatura máxima (até 2025) |
+| 39 | `figura_39_autocorrelacao.png` | Quanto o consumo de um dia se relaciona com o consumo de dias anteriores (até 2025) |
+| 40 | `figura_40_importancia_das_informacoes.png` | As 10 informações mais importantes para o comitê: treino até 2024 e erro medido em 2025, embaralhando uma informação de cada vez |
+| 41 | `figura_41_efeito_do_clima.png` | Erro do comitê com e sem clima em 2026, sem dias atípicos. O clima que de fato ocorreu não seria conhecido na sexta-feira e mostra o limite do ganho possível. Nas compras, ainda não há histórico suficiente de previsões guardadas |
+| 42 | `figura_42_compras_e_preparo.png` | Erro médio em 2026 no preparo e nas compras, por informação usada, sem dias atípicos |
+| 43 | `figura_43_fronteira_do_hibrido.png` | Erro em 2026 conforme o peso do artefato no híbrido, sem dias atípicos. A curva é descritiva: o melhor peso só é conhecido depois |
+| 44 | `figura_44_frequencia_de_deficit_e_excesso.png` | Frequência de déficit potencial e excesso potencial médio por opção de preparo em 2026, sem dias atípicos |
+| 45 | `figura_45_mae_e_rmse_por_mes.png` | Erro médio (MAE) e erro com peso nos grandes desvios (RMSE) por mês em 2026, com todos os dias |
+| 46 | `figura_46_balanco_dias_regulares.png` | Excesso potencial e déficit potencial nos 28 dias regulares de setembro e outubro de 2026 |
+| 47 | `figura_47_perfil_semanal_por_ano.png` | Consumo médio por dia da semana em cada ano. O ano de 2026 vai até outubro |
+| 48 | `figura_48_diagrama_arquitetura.png` | Arquitetura do artefato, das fontes de dados à aplicação |
+| 49 | `figura_49_diagrama_fluxo_operacional.png` | Fluxo operacional semanal: o artefato prevê e informa; a decisão é da nutricionista e da gestora |
 
 ## Tabelas
 
@@ -72,3 +84,12 @@ Figuras a 300 DPI, sem título na imagem; as legendas abaixo são sugestões. Ta
 | 22 | `tabela_22_setembro_outubro.csv` | Resultado em setembro e outubro de 2026, por recorte de dias |
 | 23 | `tabela_23_semana_de_retorno.csv` | Planejamento na semana de retorno, de 19 a 23 de outubro de 2026 |
 | 24 | `tabela_24_erro_por_dia_da_semana.csv` | Erro médio por dia da semana em 2026, sem dias atípicos |
+| 25 | `tabela_25_autocorrelacao.csv` | Autocorrelação do consumo até 2025 |
+| 26 | `tabela_26_importancia_das_informacoes.csv` | Importância das informações para o comitê, com treino até 2024 e medição em 2025 |
+| 27 | `tabela_27_efeito_do_clima.csv` | Erro do comitê com e sem informação de clima em 2026 |
+| 28 | `tabela_28_fronteira_do_hibrido.csv` | Erro em 2026 conforme o peso do artefato no híbrido |
+| 29 | `tabela_29_mae_e_rmse_por_mes.csv` | MAE e RMSE por mês em 2026, com todos os dias |
+| 30 | `tabela_30_base_e_conjuntos.csv` | Base histórica e conjuntos de avaliação na decisão de preparo |
+| 31 | `tabela_31_grupos_de_informacoes.csv` | Grupos de informações do artefato |
+| 32 | `tabela_32_familias_de_modelos.csv` | Famílias de modelos testadas no torneio |
+| 33 | `tabela_33_ingestao_bronze.csv` | Arquivos e linhas das fontes na camada Bronze |

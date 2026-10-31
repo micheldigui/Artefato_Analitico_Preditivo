@@ -1,0 +1,10 @@
+﻿Mês;Datas;Erro médio: Quantitativo da nutricionista;Erro com peso nos grandes desvios: Quantitativo da nutricionista;Erro médio: Artefato (comitê de CatBoost, KNN e consumo de referência);Erro com peso nos grandes desvios: Artefato (comitê de CatBoost, KNN e consumo de referência);Erro médio: Híbrido (artefato com quantitativo);Erro com peso nos grandes desvios: Híbrido (artefato com quantitativo)
+02/2026;14;25,4;39,3;32,7;38,1;20,9;24,3
+03/2026;22;23,6;30,0;32,9;40,1;18,9;25,3
+04/2026;19;16,3;24,0;17,8;20,9;12,8;18,3
+05/2026;18;31,9;43,8;22,2;29,3;23,6;33,7
+06/2026;20;32,8;47,6;25,7;43,8;23,4;42,8
+07/2026;9;33,2;36,5;81,9;84,5;67,3;69,6
+08/2026;21;24,2;47,3;25,6;45,3;23,0;45,4
+09/2026;16;50,2;85,9;46,5;77,9;50,2;85,9
+10/2026;17;29,4;37,1;18,2;22,4;21,9;27,1
