@@ -1,0 +1,34 @@
+﻿Grupo;Categoria;Dias;Diferença para o consumo de referência (%)
+Proteína;Carne bovina;203;0,218
+Proteína;Feijoada;17;0,629
+Proteína;Frango;223;1,571
+Proteína;Proteína mista;25;0,649
+Proteína;Peixe;34;-3,949
+Proteína;Carne suína;106;-1,167
+Preparo;Ao molho ou refogado;180;-0,787
+Preparo;Assado;95;0,943
+Preparo;Churrasco ou espeto;25;-1,075
+Preparo;Cozido ou refogado;79;1,532
+Preparo;Cremoso ou ensopado;75;-5,16
+Preparo;Empanado ou à milanesa;40;-4,723
+Preparo;Frito;4;8,247
+Preparo;Grelhado;47;5,0
+Preparo;Massa ou prato montado;63;0,549
+Evento;Acolhimento;2;22,957
+Evento;Atividade cultural;20;-15,204
+Evento;Aula regular;426;1,235
+Evento;Conselho de classe;5;-43,75
+Evento;Encerramento de etapa;11;-19,874
+Evento;Encontro institucional;84;3,423
+Evento;Evento de portas abertas;3;4,878
+Evento;Formação;7;-1,695
+Evento;Início de etapa;7;-15,683
+Evento;Jogos interclasse;1;-68,421
+Evento;Matrícula;8;23,428
+Evento;Ponto facultativo;1;-27,218
+Evento;Prazo administrativo;12;-1,704
+Evento;Reunião de apoio ao estudante;8;0,761
+Evento;Reunião de famílias;7;-9,705
+Evento;Reunião de representantes;2;-10,889
+Evento;Semana de Ciência e Tecnologia;13;-7,895
+Evento;Semana da Consciência Negra;5;-13,417

@@ -1,0 +1,9 @@
+﻿situacao;dias;erro_previsao;dias_a_menos_sem_folga;dias_a_menos_moderada;dias_a_menos_alta;decisao
+Dia atípico;6;139.16666666666666;0.0;0.0;0.0;preparo
+Dia comum;121;-4.355371900826446;61.98347107438017;23.96694214876033;8.264462809917356;preparo
+Início do período ou volta de pausa;21;21.761904761904763;38.095238095238095;23.809523809523807;19.047619047619047;preparo
+Últimos dias do período;8;24.75;50.0;50.0;50.0;preparo
+Dia atípico;6;135.5;0.0;0.0;0.0;compras
+Dia comum;121;-7.107438016528926;66.11570247933885;33.057851239669425;12.396694214876034;compras
+Início do período ou volta de pausa;21;18.952380952380953;42.857142857142854;23.809523809523807;19.047619047619047;compras
+Últimos dias do período;8;21.75;50.0;50.0;50.0;compras

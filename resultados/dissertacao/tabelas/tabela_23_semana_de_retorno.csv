@@ -1,0 +1,5 @@
+﻿Alternativa;Total na semana;Erro médio
+Consumo real;953,0;0,0
+Quantitativo da nutricionista;660,0;58,6
+Artefato (comitê de CatBoost, KNN e consumo de referência);951,0;16,8
+Híbrido (artefato com quantitativo);776,0;35,4

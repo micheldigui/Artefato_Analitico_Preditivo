@@ -1,0 +1,8 @@
+﻿Decisão;Cenário;Algoritmo;Histórico;Erro médio em 2025
+Preparo (semana seguinte);Consumo e calendário;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;19,69
+Preparo (semana seguinte);Inclui o cardápio;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;19,74
+Preparo (semana seguinte);Inclui a previsão do tempo;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;19,77
+Preparo (semana seguinte);Só histórico de consumo;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;20,75
+Compras (daqui a duas semanas);Consumo e calendário;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;20,41
+Compras (daqui a duas semanas);Inclui o cardápio;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;20,3
+Compras (daqui a duas semanas);Só histórico de consumo;Comitê de CatBoost, KNN e consumo de referência;Últimos 12 meses;20,76

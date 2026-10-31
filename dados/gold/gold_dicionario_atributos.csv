@@ -1,0 +1,40 @@
+﻿grupo;coluna;disponivel_em;descricao
+chave;origem;t1 e t2;Sexta-feira de emissao
+chave;data;t1 e t2;Dia previsto
+alvo;consumo;resultado;"Refeicoes registradas; vazio em datas futuras ou sem registro"
+alvo;alvo_relativo;resultado;consumo / nivel_base
+controle;tratamento;resultado;normal, previsivel_calendario, alto_mantido, imprevisivel, periodo_de_greve ou sem_consumo
+controle;usar_no_treino;resultado;Falso para dias imprevisiveis, greve, fora do calendario e sem consumo
+nivel;nivel_base;t1 e t2;Media entre nivel_10d e nivel_mesmo_dia
+nivel;nivel_10d;t1 e t2;Mediana dos 10 dias normais anteriores a emissao
+nivel;nivel_20d;t1 e t2;Mediana dos 20 dias normais anteriores a emissao
+nivel;nivel_mesmo_dia;t1 e t2;Mediana das 4 ultimas ocorrencias normais do mesmo dia da semana
+nivel;tendencia_nivel;t1 e t2;nivel_10d / nivel_20d
+nivel;nivel_exponencial;t1 e t2;Media exponencial dos dias normais recentes, com alfa 0,2
+nivel;nivel_bloco_atual, dias_observados_no_bloco;t1 e t2;Mediana e quantidade de dias normais ja observados no bloco do dia previsto
+nivel;ultimo_consumo;t1 e t2;Ultimo consumo normal conhecido na emissao
+nivel;media_5d, mediana_5d, media_10d, media_20d;t1 e t2;Medias e mediana moveis dos dias normais ate a emissao
+nivel;desvio_5d, desvio_10d, minimo_5d, maximo_5d;t1 e t2;Dispersao e extremos dos dias normais ate a emissao
+nivel;mesmo_dia_ha_1_ocorrencias a mesmo_dia_ha_4_ocorrencias;t1 e t2;Consumo normal nas ultimas ocorrencias conhecidas do mesmo dia da semana
+nivel;rel_*;t1 e t2;Atributo de nivel dividido por nivel_base
+nivel;coef_variacao_10d;t1 e t2;desvio_10d / nivel_base
+nivel;dispersao_recente;t1 e t2;Desvio absoluto mediano nos 10 dias normais
+nivel;idade_informacao_dias;t1 e t2;"Dias entre o ultimo consumo usado e a emissao; alto apos recessos"
+calendario;dia_seg a dia_sex;t1 e t2;Dia da semana
+calendario;dias_ate_fim_bloco;t1 e t2;Dias letivos ate o fim do bloco, limitado a 15
+calendario;dias_desde_inicio_bloco;t1 e t2;Dias letivos desde o inicio do bloco, limitado a 15
+calendario;fim_de_bloco, inicio_de_bloco;t1 e t2;"Ate 3 dias do fim; ate 4 dias do inicio"
+calendario;vespera_de_pausa, pos_pausa;t1 e t2;Dia util seguinte ou anterior sem aula
+calendario;dias_letivos_na_semana;t1 e t2;Dias letivos na semana-alvo
+calendario;dias_sem_aula_antes;t1 e t2;Dias uteis seguidos sem aula imediatamente antes do dia previsto
+calendario;semana_do_bloco;t1 e t2;Semana do dia previsto dentro do bloco letivo
+calendario;evento_tipo, evento_especial;t1 e t2;Evento do calendario e indicador de evento fora da rotina
+calendario;efeito_evento;t1 e t2;Razao media de consumo do tipo de evento ate a emissao, suavizada
+calendario;efeito_posicao_bloco;t1 e t2;Razao media de consumo na mesma posicao do periodo de aulas, em todos os anos anteriores a emissao
+calendario;mesma_epoca_ano_passado;t1 e t2;Razao mediana de consumo em torno da mesma data do ano anterior
+cardapio;proteina, preparo, prato_padronizado, sem_cardapio;"t1; t2 so se o cardapio ja estiver publicado";Categorias e nome padronizado do prato
+cardapio;efeito_proteina, efeito_preparo, efeito_prato;"t1; t2 so se o cardapio ja estiver publicado";Razao media de consumo ate a emissao, suavizada
+plano;plano_nutricionista;somente t1, 2026;Quantitativo enviado na sexta-feira a tarde
+plano;reserva_discente;somente t1, ate 2025;"Reservas; momento de fechamento nao registrado"
+clima previsto;previsao_chuva_mm, previsao_chuva_manha_mm, previsao_chuva_acum3d_mm, previsao_temp_max;"t1 desde 2024; t2 desde a emissao de 03/04/2026";"Chuva do dia, das 6h as 13h e acumulada em 3 dias, e temperatura maxima previstas na emissao; Previous Runs em t1 e media GFS/ECMWF em t2"
+oraculo;oraculo_chuva_mm, oraculo_chuva_horas, oraculo_temp_max, oraculo_vento_max;nunca na emissao;"Clima realizado; uso restrito a analise de sensibilidade"

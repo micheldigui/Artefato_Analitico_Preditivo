@@ -1,0 +1,57 @@
+﻿data;dia_nome;evento_tipo;periodo_greve;reserva_discente;plano_nutricionista;prato;chuva_mm
+2023-05-03;qua;conselho_classe;False;30.0;;;0.2
+2023-05-08;seg;aula_regular;False;96.0;;FILÉ DE FRANGO GRELHADO;0.0
+2023-07-06;qui;conselho_classe;False;;;SOBREPALETA SUINA ASSADA;0.0
+2023-07-07;sex;conselho_classe;False;;;FRICASSÊ DE FRANGO;0.0
+2023-10-03;ter;aula_regular;False;139.0;;BOBÓ DE FRANGO;0.2
+2023-10-10;ter;conselho_classe;False;99.0;;BISTECA COM ABACAXI;0.0
+2023-10-11;qua;conselho_classe;False;67.0;;FILÉ DE FRANGO ASSADO;0.0
+2023-10-20;sex;aula_regular;False;66.0;;FILÉ DE MERLUZA À DORÊ COM MOLHO ROSÊ;0.5
+2023-11-21;ter;semana_consciencia_negra;False;93.0;;FRANGO COM QUIABO;2.6
+2023-11-24;sex;semana_consciencia_negra;False;73.0;;PEIXE NO A MILANESA;5.2
+2023-12-12;ter;aula_regular;False;39.0;;CARNE MOÍDA COM LEGUMES;0.3
+2023-12-13;qua;encerramento_etapa;False;37.0;;FEIJOADA;0.0
+2024-02-05;seg;inicio_etapa;False;;;CUPIM ASSADO;0.3
+2024-02-06;ter;inicio_etapa;False;;;BISTECA AO ABACAXI;0.6
+2024-02-07;qua;matricula;False;;;FILÉ DE FRANGO MOLHO MOSTARDA;0.0
+2024-02-08;qui;matricula;False;;;BIFE À ROLÊ;0.1
+2024-04-04;qui;atividade_durante_greve;True;143.0;;LASANHA À BOLONHESA;0.0
+2024-04-10;qua;atividade_durante_greve;True;;;PANQUECA CARNE;0.1
+2024-04-16;ter;atividade_durante_greve;True;;;CARNE ASSADA;0.6
+2024-04-17;qua;atividade_durante_greve;True;;;FRANGO À PIZZAIOLO;16.3
+2024-04-22;seg;atividade_durante_greve;True;;;CARNE DE PANELA;0.0
+2024-04-23;ter;atividade_durante_greve;True;;;PERNIL DESFIADO AO MOLHO;0.0
+2024-04-25;qui;atividade_durante_greve;True;;;ISCA DE FRANGO ACEBOLADA;0.3
+2024-05-06;seg;atividade_durante_greve;True;;;ALMÔNDEGAS AO SUGO;0.0
+2024-05-07;ter;atividade_durante_greve;True;;;CARNE ASSADA;0.0
+2024-05-13;seg;atividade_durante_greve;True;;;BIFE A MILANESA;0.0
+2024-05-14;ter;atividade_durante_greve;True;;;FRANGO EMPANADO;1.3
+2024-05-21;ter;atividade_durante_greve;True;;;PANQUECA DE FRANGO;0.1
+2024-05-23;qui;atividade_durante_greve;True;;;CHURRASCO MISTO BOVINO;0.0
+2024-05-27;seg;atividade_durante_greve;True;;;BIFE DE PANELA;14.4
+2024-05-29;qua;atividade_durante_greve;True;;;ASSADO VIENENSE;0.0
+2024-06-24;seg;aula_regular;False;;;CUPIM ASSADO;0.0
+2024-09-03;ter;aula_regular;False;130.0;;FILÉ DE FRANGO GRELHADO;0.0
+2024-09-04;qua;aula_regular;False;174.0;;PERNIL ASSADO;0.0
+2024-09-05;qui;aula_regular;False;139.0;;ALMÔNDEGAS AO SUGO;0.0
+2024-09-10;ter;aula_regular;False;144.0;;FRICASSÊ DE FRANGO;0.0
+2024-09-11;qua;conselho_classe;False;126.0;;BIFE DE PANELA;0.0
+2024-09-12;qui;conselho_classe;False;148.0;;BISTECA GRELHADA;0.0
+2024-09-19;qui;aula_regular;False;125.0;;CARNE ASSADA AO ROTY;0.0
+2024-11-12;ter;aula_regular;False;;;ESCONDIDINHO DE CARNE;0.6
+2024-11-13;qua;conselho_classe;False;20.0;;FEIJOADA;5.4
+2024-12-03;ter;encontro_institucional;False;146.0;;COPA LOMBO;30.3
+2025-03-13;qui;atividade_cultural;False;163.0;;FILÉ DE FRANGO GRELHADO;14.4
+2025-03-14;sex;atividade_cultural;False;90.0;;ESCONDIDINHO DE CARNE;5.0
+2025-06-11;qua;atividade_cultural;False;121.0;;FRANGO CAIPIRA;0.0
+2025-06-20;sex;aula_regular;False;86.0;;ESCONDIDINHO DE FRANGO;0.0
+2025-10-27;seg;aula_regular;False;;;FILÉ DE FRANGO GRELHADO;1.0
+2025-11-10;seg;aula_regular;False;90.0;;BISTECA ACEBOLADA;0.0
+2025-11-17;seg;aula_regular;False;99.0;;CHURRASCO MISTO ACEBOLADO;28.5
+2025-11-19;qua;aula_regular;False;117.0;;FRANGO EM CUBOS AO MOLHO;0.1
+2025-11-25;ter;semana_consciencia_negra;False;119.0;;BIFE DE PANELA;0.7
+2025-11-28;sex;semana_consciencia_negra;False;91.0;;CARNE MOIDA COM CENOURA;0.6
+2026-09-16;qua;aula_regular;False;;220.0;FILÉ DE FRANGO GRELHADO;0.6
+2026-09-24;qui;encontro_institucional;False;;220.0;PANQUECA DE CARNE;0.0
+2026-09-28;seg;aula_regular;False;;225.0;ESCONDIDINHO DE CARNE MOÍDA;0.0
+2026-09-29;ter;aula_regular;False;;200.0;ISCA SUÍNA;0.9

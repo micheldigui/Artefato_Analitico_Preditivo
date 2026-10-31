@@ -1,0 +1,14 @@
+﻿Medida;Consumo de referência;Consumo recente, com mais peso nos últimos dias;Consumo de referência dos últimos 10 dias;Consumo de referência dos últimos 20 dias;Consumo de referência neste dia da semana;Consumo de referência neste período de aulas;Último consumo conhecido;Média dos últimos 5 dias;Valor central dos últimos 5 dias;Média dos últimos 10 dias;Média dos últimos 20 dias;Mesmo dia da semana, última vez conhecida;Mesmo dia da semana, duas vezes atrás
+Consumo de referência;1,0;0,91;0,93;0,92;0,95;0,83;0,57;0,87;0,86;0,93;0,93;0,83;0,87
+Consumo recente, com mais peso nos últimos dias;0,91;1,0;0,96;0,91;0,77;0,89;0,74;0,98;0,95;0,98;0,94;0,76;0,71
+Consumo de referência dos últimos 10 dias;0,93;0,96;1,0;0,94;0,77;0,86;0,6;0,93;0,93;0,98;0,95;0,73;0,74
+Consumo de referência dos últimos 20 dias;0,92;0,91;0,94;1,0;0,81;0,88;0,52;0,86;0,84;0,94;0,99;0,68;0,73
+Consumo de referência neste dia da semana;0,95;0,77;0,77;0,81;1,0;0,71;0,48;0,72;0,7;0,78;0,82;0,82;0,89
+Consumo de referência neste período de aulas;0,83;0,89;0,86;0,88;0,71;1,0;0,58;0,86;0,83;0,88;0,9;0,67;0,65
+Último consumo conhecido;0,57;0,74;0,6;0,52;0,48;0,58;1,0;0,72;0,65;0,64;0,58;0,56;0,44
+Média dos últimos 5 dias;0,87;0,98;0,93;0,86;0,72;0,86;0,72;1,0;0,96;0,96;0,89;0,76;0,67
+Valor central dos últimos 5 dias;0,86;0,95;0,93;0,84;0,7;0,83;0,65;0,96;1,0;0,93;0,87;0,74;0,64
+Média dos últimos 10 dias;0,93;0,98;0,98;0,94;0,78;0,88;0,64;0,96;0,93;1,0;0,96;0,75;0,74
+Média dos últimos 20 dias;0,93;0,94;0,95;0,99;0,82;0,9;0,58;0,89;0,87;0,96;1,0;0,71;0,74
+Mesmo dia da semana, última vez conhecida;0,83;0,76;0,73;0,68;0,82;0,67;0,56;0,76;0,74;0,75;0,71;1,0;0,7
+Mesmo dia da semana, duas vezes atrás;0,87;0,71;0,74;0,73;0,89;0,65;0,44;0,67;0,64;0,74;0,74;0,7;1,0

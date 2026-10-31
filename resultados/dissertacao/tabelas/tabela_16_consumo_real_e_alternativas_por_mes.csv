@@ -1,0 +1,10 @@
+﻿Mês;Consumo real;Quantitativo da nutricionista;Artefato (comitê de CatBoost, KNN e consumo de referência);Híbrido (artefato com quantitativo)
+02/2026;157;178;136;157
+03/2026;175;183;169;177
+04/2026;179;184;174;181
+05/2026;172;186;165;177
+06/2026;178;197;190;193
+07/2026;82;116;164;150
+08/2026;178;197;185;195
+09/2026;164;212;201;212
+10/2026;196;188;190;193
