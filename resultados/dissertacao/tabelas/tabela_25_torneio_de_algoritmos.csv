@@ -1,0 +1,35 @@
+﻿Decisão;Alternativa;Erro médio em 2024 e 2025
+Preparo (semana seguinte);Comitê de CatBoost, KNN e referência;22,73
+Preparo (semana seguinte);KNN;23,1
+Preparo (semana seguinte);CatBoost;23,39
+Preparo (semana seguinte);Consumo de referência;23,58
+Preparo (semana seguinte);RandomForest;23,67
+Preparo (semana seguinte);XGBoost;23,77
+Preparo (semana seguinte);ExtraTrees;23,87
+Preparo (semana seguinte);GradientBoosting;23,94
+Preparo (semana seguinte);LightGBM;24,05
+Preparo (semana seguinte);HistGB;24,48
+Preparo (semana seguinte);Ridge;25,49
+Preparo (semana seguinte);SVR;25,94
+Preparo (semana seguinte);ElasticNet;26,29
+Preparo (semana seguinte);Lasso;26,38
+Preparo (semana seguinte);Huber;27,23
+Preparo (semana seguinte);OLS;28,64
+Preparo (semana seguinte);MLP;31,95
+Compras (daqui a duas semanas);Comitê de CatBoost, KNN e referência;25,22
+Compras (daqui a duas semanas);ExtraTrees;26,02
+Compras (daqui a duas semanas);CatBoost;26,21
+Compras (daqui a duas semanas);Consumo de referência;26,34
+Compras (daqui a duas semanas);RandomForest;26,4
+Compras (daqui a duas semanas);XGBoost;26,59
+Compras (daqui a duas semanas);GradientBoosting;26,72
+Compras (daqui a duas semanas);KNN;26,98
+Compras (daqui a duas semanas);HistGB;27,04
+Compras (daqui a duas semanas);LightGBM;27,11
+Compras (daqui a duas semanas);SVR;29,87
+Compras (daqui a duas semanas);Ridge;30,46
+Compras (daqui a duas semanas);ElasticNet;31,96
+Compras (daqui a duas semanas);Lasso;32,06
+Compras (daqui a duas semanas);OLS;32,94
+Compras (daqui a duas semanas);Huber;33,06
+Compras (daqui a duas semanas);MLP;34,25

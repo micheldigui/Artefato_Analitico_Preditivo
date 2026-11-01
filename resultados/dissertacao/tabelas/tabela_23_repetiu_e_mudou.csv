@@ -1,0 +1,48 @@
+﻿Grupo;Categoria;Dias 2023 a 2025;Diferença para o consumo de referência (%) 2023 a 2025;Dias fev. a ago. 2026;Diferença para o consumo de referência (%) fev. a ago. 2026;Distância entre os períodos (pontos);Leitura
+Dia da semana;Segunda;96;0,7;23;9,9;9,2;Mudou
+Dia da semana;Terça;93;-0,5;23;1,6;2,1;Repetiu
+Dia da semana;Quarta;97;1,6;26;6,0;4,4;Repetiu
+Dia da semana;Quinta;95;-4,1;26;-13,2;-9,1;Mudou
+Dia da semana;Sexta;92;-1,1;23;-10,3;-9,2;Mudou
+Proteína;Carne bovina;162;-0,1;32;-2,7;-2,6;Repetiu
+Proteína;Carne suína;80;-1,2;20;-1,1;0,1;Repetiu
+Proteína;Feijoada;17;0,6;0;;;Poucos dias
+Proteína;Frango;169;1,1;43;0,4;-0,7;Repetiu
+Proteína;Peixe;22;-3,5;10;-4,4;-0,9;Repetiu
+Proteína;Proteína mista;22;0,7;3;-9,9;-10,6;Poucos dias
+Forma de preparo;Ao molho ou refogado;122;-2,0;42;1,6;3,6;Repetiu
+Forma de preparo;Assado;81;0,2;14;-1,1;-1,3;Repetiu
+Forma de preparo;Churrasco ou espeto;25;-1,1;0;;;Poucos dias
+Forma de preparo;Cozido ou refogado;55;1,4;20;-1,8;-3,2;Repetiu
+Forma de preparo;Cremoso ou ensopado;62;-1,0;9;-21,0;-20,0;Poucos dias
+Forma de preparo;Empanado ou à milanesa;38;-2,2;2;-23,6;-21,4;Poucos dias
+Forma de preparo;Frito;4;8,2;0;;;Poucos dias
+Forma de preparo;Grelhado;34;4,3;12;3,0;-1,3;Repetiu
+Forma de preparo;Massa ou prato montado;51;-0,2;9;-2,5;-2,3;Poucos dias
+Evento;Atividade cultural;11;-9,5;9;-21,0;-11,5;Poucos dias
+Evento;Aula regular;346;0,7;68;0,2;-0,5;Repetiu
+Evento;Conselho de classe;3;-12,4;2;-53,6;-41,2;Poucos dias
+Evento;Encerramento de etapa;9;-19,9;2;-53,2;-33,3;Poucos dias
+Evento;Encontro institucional;48;1,6;28;7,5;5,9;Mudou
+Evento;Evento de portas abertas;2;-3,9;1;1,5;5,4;Poucos dias
+Evento;Formação;7;-1,7;0;;;Poucos dias
+Evento;Início de etapa;4;-21,8;2;-10,1;11,7;Poucos dias
+Evento;Matrícula;3;51,3;5;15,0;-36,3;Poucos dias
+Evento;Ponto facultativo;1;-27,2;0;;;Poucos dias
+Evento;Prazo administrativo;11;-2,2;0;;;Poucos dias
+Evento;Reunião de apoio ao estudante;8;0,8;0;;;Poucos dias
+Evento;Reunião de famílias;7;-9,7;0;;;Poucos dias
+Evento;Semana da Consciência Negra;5;-13,4;0;;;Poucos dias
+Evento;Semana de Ciência e Tecnologia;8;-19,7;0;;;Poucos dias
+Evento;Acolhimento;0;;2;19,6;;Poucos dias
+Evento;Jogos interclasse;0;;1;-71,8;;Poucos dias
+Evento;Reunião de representantes;0;;1;-26,7;;Poucos dias
+Chuva;Sem chuva;209;-0,9;48;-1,0;-0,1;Repetiu
+Chuva;Até 5 mm;179;0,7;44;3,9;3,2;Repetiu
+Chuva;5 a 15 mm;59;1,4;16;-1,0;-2,4;Repetiu
+Chuva;Acima de 15 mm;26;-1,9;13;-8,0;-6,1;Mudou
+Temperatura máxima;Até 24 °C;158;-1,1;50;-0,2;0,9;Repetiu
+Temperatura máxima;24 a 27 °C;131;-0,8;34;-2,3;-1,5;Repetiu
+Temperatura máxima;27 a 30 °C;112;1,0;31;7,4;6,4;Mudou
+Temperatura máxima;30 a 33 °C;57;1,7;6;8,7;7,0;Poucos dias
+Temperatura máxima;33 °C ou mais;15;3,8;0;;;Poucos dias

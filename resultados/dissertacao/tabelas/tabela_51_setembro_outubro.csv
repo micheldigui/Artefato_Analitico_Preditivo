@@ -1,0 +1,10 @@
+﻿Recorte;Alternativa;Erro médio;Excesso potencial;Déficit potencial;% de dias com déficit potencial
+28 dias regulares;Quantitativo da nutricionista;22,1;289,0;331,0;39,3
+28 dias regulares;Artefato (ExtraTrees);13,2;214,0;156,0;50,0
+28 dias regulares;Híbrido (artefato com quantitativo);18,3;244,0;268,0;42,9
+5 dias atípicos;Quantitativo da nutricionista;136,6;683,0;0,0;0,0
+5 dias atípicos;Artefato (ExtraTrees);125,8;629,0;0,0;0,0
+5 dias atípicos;Híbrido (artefato com quantitativo);133,4;667,0;0,0;0,0
+33 dias com consumo;Quantitativo da nutricionista;39,5;972,0;331,0;33,3
+33 dias com consumo;Artefato (ExtraTrees);30,3;843,0;156,0;42,4
+33 dias com consumo;Híbrido (artefato com quantitativo);35,7;911,0;268,0;36,4

@@ -1,0 +1,18 @@
+﻿verificacao;resultado;detalhe
+Consumo da Gold igual ao CSV (preparo);ok;636 dias
+Consumo da Gold igual ao CSV (compras);ok;631 dias
+Quantitativo da Gold igual ao CSV;ok;164 dias
+Reservas da Gold iguais ao CSV;ok;471 dias
+Reservas 2023-2025: 458 datas, 2.916 a mais, 9.494 a menos;ok;
+Quantitativo até 31/08/2026: 123 datas, 2.561 a mais, 663 a menos;ok;
+Erro médio de plano confere;ok;24.12
+Erro médio de C1 confere;ok;25.09
+Erro médio de C2 confere;ok;24.59
+Erro médio de C4 confere;ok;20.42
+Consumo das previsões igual ao CSV;ok;
+Toda data avaliada vem depois da sua sexta-feira;ok;
+Antecedência de preparo entre 3 e 7 dias;ok;
+Antecedência de compras entre 10 e 14 dias;ok;
+Configuração é o modelo congelado;ok;
+Previsão não copia o quantitativo;ok;diferença mediana 20.0
+Queda de fim de período existe até 2025;ok;0.46 contra 1.01

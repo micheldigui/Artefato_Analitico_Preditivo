@@ -1,0 +1,36 @@
+﻿Grupo;Variável;Dias analisados;Relação linear;Relação pela ordem
+Consumo recente;Mesmo dia da semana comparado à referência;121;0,315;0,329
+Calendário;Dias de aula até o fim do período;121;0,488;0,314
+Calendário;Últimos dias do período de aulas;121;-0,445;-0,299
+Calendário;Segunda-feira;121;0,246;0,277
+Calendário;Dia com evento fora da rotina;121;-0,273;-0,264
+Calendário;Quinta-feira;121;-0,195;-0,259
+Cardápio;Efeito do prato no consumo;57;0,295;0,258
+Calendário;Efeito do evento no consumo;117;0,33;0,239
+Calendário;Dias de aula na semana;121;0,335;0,231
+Calendário;Semana dentro do período de aulas;121;-0,23;-0,211
+Clima previsto;Chuva prevista de manhã (mm);121;0,201;0,196
+Consumo recente;Dias já registrados neste período de aulas;121;-0,225;-0,195
+Consumo recente;Consumo do período de aulas comparado à referência;111;-0,135;-0,189
+Calendário;Sexta-feira;121;-0,135;-0,167
+Clima previsto;Chuva prevista no dia (mm);121;0,213;0,154
+Consumo recente;Média de 5 dias comparada à referência;121;-0,021;-0,144
+Clima previsto;Chuva prevista em 3 dias (mm);121;0,171;0,135
+Calendário;Dias sem aula logo antes;121;-0,041;-0,134
+Calendário;Volta depois de dia sem aula;121;-0,13;-0,134
+Calendário;Quarta-feira;121;0,082;0,123
+Clima que ocorreu;Temperatura máxima que ocorreu;121;0,093;0,12
+Consumo recente;Instabilidade dos últimos 10 dias;121;-0,058;-0,118
+Clima que ocorreu;Chuva que ocorreu no dia (mm);121;0,056;0,109
+Clima previsto;Temperatura máxima prevista;121;0,099;0,107
+Clima que ocorreu;Horas de chuva que ocorreram;121;0,085;0,093
+Consumo recente;Mesmo dia, duas vezes atrás, comparado à referência;121;0,077;0,087
+Consumo recente;Dias desde o último consumo conhecido;121;0,006;-0,083
+Calendário;Véspera de dia sem aula;121;-0,112;-0,078
+Cardápio;Efeito do preparo no consumo;108;0,072;-0,074
+Consumo recente;Consumo subindo ou caindo;121;0,018;-0,071
+Calendário;Primeiros dias do período de aulas;121;-0,133;-0,058
+Clima que ocorreu;Vento máximo que ocorreu;121;-0,103;-0,037
+Cardápio;Efeito da proteína no consumo;108;0,04;0,033
+Calendário;Terça-feira;121;0,007;0,032
+Consumo recente;Último consumo comparado à referência;121;0,044;0,018

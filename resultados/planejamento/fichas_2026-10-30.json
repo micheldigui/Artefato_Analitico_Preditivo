@@ -4,27 +4,27 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-03",
     "dia": "Terça-feira",
-    "previsao": 193,
+    "previsao": 194,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 193,
+        "refeicoes": 194,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 43
       },
       "moderada": {
-        "refeicoes": 207,
-        "folga": 14,
-        "chance_consumo_acima_pct": 22
+        "refeicoes": 205,
+        "folga": 11,
+        "chance_consumo_acima_pct": 19
       },
       "alta": {
-        "refeicoes": 216,
-        "folga": 23,
+        "refeicoes": 222,
+        "folga": 28,
         "chance_consumo_acima_pct": 10
       }
     },
     "quantitativo_nutricionista": 210,
-    "combinacao_com_quantitativo": 202,
+    "combinacao_com_quantitativo": 197,
     "pontos_de_atencao": [
       "Dias parecidos costumam ficar abaixo da referência: confira antes de usar margem de segurança."
     ],
@@ -58,27 +58,27 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-04",
     "dia": "Quarta-feira",
-    "previsao": 217,
+    "previsao": 225,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 217,
+        "refeicoes": 225,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 50
       },
       "moderada": {
-        "refeicoes": 231,
-        "folga": 14,
+        "refeicoes": 242,
+        "folga": 17,
         "chance_consumo_acima_pct": 22
       },
       "alta": {
-        "refeicoes": 240,
-        "folga": 23,
+        "refeicoes": 256,
+        "folga": 31,
         "chance_consumo_acima_pct": 10
       }
     },
     "quantitativo_nutricionista": 230,
-    "combinacao_com_quantitativo": 224,
+    "combinacao_com_quantitativo": 226,
     "pontos_de_atencao": [],
     "calendario": {
       "evento": "aula regular",
@@ -108,27 +108,27 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-05",
     "dia": "Quinta-feira",
-    "previsao": 194,
+    "previsao": 190,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 194,
+        "refeicoes": 190,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 50
       },
       "moderada": {
-        "refeicoes": 208,
-        "folga": 14,
+        "refeicoes": 207,
+        "folga": 17,
         "chance_consumo_acima_pct": 22
       },
       "alta": {
-        "refeicoes": 217,
-        "folga": 23,
+        "refeicoes": 221,
+        "folga": 31,
         "chance_consumo_acima_pct": 10
       }
     },
     "quantitativo_nutricionista": 200,
-    "combinacao_com_quantitativo": 197,
+    "combinacao_com_quantitativo": 192,
     "pontos_de_atencao": [],
     "calendario": {
       "evento": "aula regular",
@@ -160,27 +160,27 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-06",
     "dia": "Sexta-feira",
-    "previsao": 187,
+    "previsao": 183,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 187,
+        "refeicoes": 183,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 50
       },
       "moderada": {
-        "refeicoes": 201,
-        "folga": 14,
+        "refeicoes": 200,
+        "folga": 17,
         "chance_consumo_acima_pct": 22
       },
       "alta": {
-        "refeicoes": 210,
-        "folga": 23,
+        "refeicoes": 214,
+        "folga": 31,
         "chance_consumo_acima_pct": 10
       }
     },
     "quantitativo_nutricionista": 190,
-    "combinacao_com_quantitativo": 188,
+    "combinacao_com_quantitativo": 184,
     "pontos_de_atencao": [],
     "calendario": {
       "evento": "aula regular",
@@ -210,22 +210,22 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-09",
     "dia": "Segunda-feira",
-    "previsao": 214,
+    "previsao": 229,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 214,
+        "refeicoes": 229,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 56
       },
       "moderada": {
-        "refeicoes": 234,
-        "folga": 20,
+        "refeicoes": 244,
+        "folga": 15,
         "chance_consumo_acima_pct": 25
       },
       "alta": {
-        "refeicoes": 246,
-        "folga": 32,
+        "refeicoes": 263,
+        "folga": 34,
         "chance_consumo_acima_pct": 10
       }
     },
@@ -260,22 +260,22 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-10",
     "dia": "Terça-feira",
-    "previsao": 197,
+    "previsao": 207,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 197,
+        "refeicoes": 207,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 56
       },
       "moderada": {
-        "refeicoes": 217,
-        "folga": 20,
+        "refeicoes": 222,
+        "folga": 15,
         "chance_consumo_acima_pct": 25
       },
       "alta": {
-        "refeicoes": 229,
-        "folga": 32,
+        "refeicoes": 241,
+        "folga": 34,
         "chance_consumo_acima_pct": 10
       }
     },
@@ -310,22 +310,22 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-11",
     "dia": "Quarta-feira",
-    "previsao": 215,
+    "previsao": 225,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 215,
+        "refeicoes": 225,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 56
       },
       "moderada": {
-        "refeicoes": 235,
-        "folga": 20,
+        "refeicoes": 240,
+        "folga": 15,
         "chance_consumo_acima_pct": 25
       },
       "alta": {
-        "refeicoes": 247,
-        "folga": 32,
+        "refeicoes": 259,
+        "folga": 34,
         "chance_consumo_acima_pct": 10
       }
     },
@@ -360,22 +360,22 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-12",
     "dia": "Quinta-feira",
-    "previsao": 197,
+    "previsao": 201,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 197,
+        "refeicoes": 201,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 56
       },
       "moderada": {
-        "refeicoes": 217,
-        "folga": 20,
+        "refeicoes": 216,
+        "folga": 15,
         "chance_consumo_acima_pct": 25
       },
       "alta": {
-        "refeicoes": 229,
-        "folga": 32,
+        "refeicoes": 235,
+        "folga": 34,
         "chance_consumo_acima_pct": 10
       }
     },
@@ -412,22 +412,22 @@
     "sexta_do_planejamento": "2026-10-30",
     "data": "2026-11-13",
     "dia": "Sexta-feira",
-    "previsao": 194,
+    "previsao": 195,
     "base_da_previsao": "Cenário 1: consumo e calendário",
     "opcoes": {
       "sem_folga": {
-        "refeicoes": 194,
+        "refeicoes": 195,
         "folga": 0,
-        "chance_consumo_acima_pct": 55
+        "chance_consumo_acima_pct": 56
       },
       "moderada": {
-        "refeicoes": 214,
-        "folga": 20,
+        "refeicoes": 210,
+        "folga": 15,
         "chance_consumo_acima_pct": 25
       },
       "alta": {
-        "refeicoes": 226,
-        "folga": 32,
+        "refeicoes": 229,
+        "folga": 34,
         "chance_consumo_acima_pct": 10
       }
     },

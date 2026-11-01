@@ -1,0 +1,9 @@
+﻿Decisão;Situação do dia;Datas;Tendência da previsão;% abaixo, sem margem;% abaixo, margem de segurança moderada;% abaixo, margem de segurança alta
+Preparo;Dia atípico;2;166,5;0,0;0,0;0,0
+Preparo;Dia comum;102;-3,6;55,9;30,4;13,7
+Preparo;Início do período ou volta de pausa;15;22,7;33,3;26,7;13,3
+Preparo;Últimos dias do período;4;23,5;25,0;0,0;0,0
+Compras;Dia atípico;2;165,5;0,0;0,0;0,0
+Compras;Dia comum;102;-5,7;61,8;30,4;13,7
+Compras;Início do período ou volta de pausa;15;24,6;33,3;20,0;13,3
+Compras;Últimos dias do período;4;23,8;25,0;0,0;0,0

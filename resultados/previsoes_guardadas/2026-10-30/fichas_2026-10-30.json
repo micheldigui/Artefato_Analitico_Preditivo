@@ -1,0 +1,460 @@
+[
+  {
+    "decisao": "preparo",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-03",
+    "dia": "Terça-feira",
+    "previsao": 193,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 193,
+        "folga": 0,
+        "chance_consumo_acima_pct": 38
+      },
+      "moderada": {
+        "refeicoes": 204,
+        "folga": 11,
+        "chance_consumo_acima_pct": 24
+      },
+      "alta": {
+        "refeicoes": 231,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": 210,
+    "combinacao_com_quantitativo": 202,
+    "pontos_de_atencao": [
+      "Dias parecidos costumam ficar abaixo da referência: confira antes de usar margem de segurança."
+    ],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 4
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 0 mm no dia, 0 mm de manhã; máxima de 29 °C.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 194,
+      "mesmo_dia_ultimas_vezes": [
+        192,
+        185,
+        199,
+        201
+      ],
+      "mesma_epoca_ano_passado_pct": 98,
+      "dias_na_mesma_epoca": 9
+    },
+    "dias_parecidos": [
+      "Volta depois de dia sem aula: consumo em torno de 91% da referência (32 dias anteriores)."
+    ]
+  },
+  {
+    "decisao": "preparo",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-04",
+    "dia": "Quarta-feira",
+    "previsao": 217,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 217,
+        "folga": 0,
+        "chance_consumo_acima_pct": 59
+      },
+      "moderada": {
+        "refeicoes": 236,
+        "folga": 19,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 248,
+        "folga": 31,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": 230,
+    "combinacao_com_quantitativo": 224,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 4
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 5 mm no dia, 1 mm de manhã; máxima de 29 °C.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 200,
+      "mesmo_dia_ultimas_vezes": [
+        232,
+        202,
+        193,
+        215
+      ],
+      "mesma_epoca_ano_passado_pct": 97,
+      "dias_na_mesma_epoca": 10
+    },
+    "dias_parecidos": []
+  },
+  {
+    "decisao": "preparo",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-05",
+    "dia": "Quinta-feira",
+    "previsao": 194,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 194,
+        "folga": 0,
+        "chance_consumo_acima_pct": 59
+      },
+      "moderada": {
+        "refeicoes": 213,
+        "folga": 19,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 225,
+        "folga": 31,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": 200,
+    "combinacao_com_quantitativo": 197,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 4
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 7 mm no dia, 2 mm de manhã; máxima de 26 °C.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 195,
+      "mesmo_dia_ultimas_vezes": [
+        172,
+        193,
+        202,
+        210
+      ],
+      "mesma_epoca_ano_passado_pct": 97,
+      "dias_na_mesma_epoca": 10
+    },
+    "dias_parecidos": [
+      "Quintas-feiras: consumo em torno de 95% da referência (127 dias anteriores)."
+    ]
+  },
+  {
+    "decisao": "preparo",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-06",
+    "dia": "Sexta-feira",
+    "previsao": 187,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 187,
+        "folga": 0,
+        "chance_consumo_acima_pct": 59
+      },
+      "moderada": {
+        "refeicoes": 206,
+        "folga": 19,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 218,
+        "folga": 31,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": 190,
+    "combinacao_com_quantitativo": 188,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 4
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 6 mm no dia, 0 mm de manhã; máxima de 26 °C.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 190,
+      "mesmo_dia_ultimas_vezes": [
+        149,
+        181,
+        194,
+        201
+      ],
+      "mesma_epoca_ano_passado_pct": 97,
+      "dias_na_mesma_epoca": 10
+    },
+    "dias_parecidos": []
+  },
+  {
+    "decisao": "compras",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-09",
+    "dia": "Segunda-feira",
+    "previsao": 214,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 214,
+        "folga": 0,
+        "chance_consumo_acima_pct": 61
+      },
+      "moderada": {
+        "refeicoes": 235,
+        "folga": 21,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 252,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": null,
+    "combinacao_com_quantitativo": null,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 5
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 2 mm no dia, 1 mm de manhã; máxima de 22 °C. Com duas semanas de antecedência, essa previsão é pouco confiável.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 202,
+      "mesmo_dia_ultimas_vezes": [
+        199,
+        224,
+        201,
+        237
+      ],
+      "mesma_epoca_ano_passado_pct": 95,
+      "dias_na_mesma_epoca": 9
+    },
+    "dias_parecidos": []
+  },
+  {
+    "decisao": "compras",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-10",
+    "dia": "Terça-feira",
+    "previsao": 197,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 197,
+        "folga": 0,
+        "chance_consumo_acima_pct": 61
+      },
+      "moderada": {
+        "refeicoes": 218,
+        "folga": 21,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 235,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": null,
+    "combinacao_com_quantitativo": null,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 5
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 1 mm no dia, 0 mm de manhã; máxima de 22 °C. Com duas semanas de antecedência, essa previsão é pouco confiável.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 194,
+      "mesmo_dia_ultimas_vezes": [
+        192,
+        185,
+        199,
+        201
+      ],
+      "mesma_epoca_ano_passado_pct": 93,
+      "dias_na_mesma_epoca": 9
+    },
+    "dias_parecidos": []
+  },
+  {
+    "decisao": "compras",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-11",
+    "dia": "Quarta-feira",
+    "previsao": 215,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 215,
+        "folga": 0,
+        "chance_consumo_acima_pct": 61
+      },
+      "moderada": {
+        "refeicoes": 236,
+        "folga": 21,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 253,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": null,
+    "combinacao_com_quantitativo": null,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 5
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 21 mm no dia, 1 mm de manhã; máxima de 23 °C. Com duas semanas de antecedência, essa previsão é pouco confiável.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 200,
+      "mesmo_dia_ultimas_vezes": [
+        232,
+        202,
+        193,
+        215
+      ],
+      "mesma_epoca_ano_passado_pct": 94,
+      "dias_na_mesma_epoca": 8
+    },
+    "dias_parecidos": []
+  },
+  {
+    "decisao": "compras",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-12",
+    "dia": "Quinta-feira",
+    "previsao": 197,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 197,
+        "folga": 0,
+        "chance_consumo_acima_pct": 61
+      },
+      "moderada": {
+        "refeicoes": 218,
+        "folga": 21,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 235,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": null,
+    "combinacao_com_quantitativo": null,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 5
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 9 mm no dia, 1 mm de manhã; máxima de 24 °C. Com duas semanas de antecedência, essa previsão é pouco confiável.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 195,
+      "mesmo_dia_ultimas_vezes": [
+        172,
+        193,
+        202,
+        210
+      ],
+      "mesma_epoca_ano_passado_pct": 93,
+      "dias_na_mesma_epoca": 7
+    },
+    "dias_parecidos": [
+      "Quintas-feiras: consumo em torno de 95% da referência (127 dias anteriores)."
+    ]
+  },
+  {
+    "decisao": "compras",
+    "sexta_do_planejamento": "2026-10-30",
+    "data": "2026-11-13",
+    "dia": "Sexta-feira",
+    "previsao": 194,
+    "base_da_previsao": "Cenário 1: consumo e calendário",
+    "opcoes": {
+      "sem_folga": {
+        "refeicoes": 194,
+        "folga": 0,
+        "chance_consumo_acima_pct": 61
+      },
+      "moderada": {
+        "refeicoes": 215,
+        "folga": 21,
+        "chance_consumo_acima_pct": 25
+      },
+      "alta": {
+        "refeicoes": 232,
+        "folga": 38,
+        "chance_consumo_acima_pct": 10
+      }
+    },
+    "quantitativo_nutricionista": null,
+    "combinacao_com_quantitativo": null,
+    "pontos_de_atencao": [],
+    "calendario": {
+      "evento": "aula regular",
+      "dias_de_aula_ate_fim_do_periodo": null,
+      "dias_de_aula_na_semana": 5
+    },
+    "cardapio": null,
+    "clima": {
+      "texto": "Chuva prevista: 6 mm no dia, 1 mm de manhã; máxima de 26 °C. Com duas semanas de antecedência, essa previsão é pouco confiável.",
+      "alerta": false
+    },
+    "historico": {
+      "consumo_tipico_recente": 190,
+      "mesmo_dia_ultimas_vezes": [
+        149,
+        181,
+        194,
+        201
+      ],
+      "mesma_epoca_ano_passado_pct": 93,
+      "dias_na_mesma_epoca": 7
+    },
+    "dias_parecidos": []
+  }
+]

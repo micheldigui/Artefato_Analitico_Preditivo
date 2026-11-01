@@ -1,0 +1,21 @@
+﻿janela;ideia;erro_2024;erro_2025;media_2024_2025;erro_fev_ago_2026;erro_set_out_2026
+t1;Residual;25.35;19.73;22.54;24.94;16.14
+t1;Comitê + Prophet;25.56;19.54;22.55;27.68;15.14
+t1;Comitê de CatBoost, KNN e referência;25.71;19.74;22.72;28.03;12.61
+t1;Comitê + SARIMAX;25.72;20.1;22.91;29.44;13.54
+t1;Regimes;26.12;19.84;22.98;26.53;11.96
+t1;Stacking com 90 dias;26.27;19.71;22.99;23.1;22.46
+t1;Stacking com 365 dias;26.63;19.78;23.21;26.12;17.71
+t1;Stacking com 180 dias;26.63;20.1;23.37;23.3;21.32
+t1;SARIMAX;30.53;27.01;28.77;41.32;19.57
+t1;Prophet;33.56;27.91;30.74;30.21;33.61
+t2;Comitê de CatBoost, KNN e referência;30.3;20.2;25.25;27.4;13.21
+t2;Comitê + SARIMAX;30.01;20.63;25.32;29.31;13.57
+t2;Comitê + Prophet;31.12;19.92;25.52;27.51;16.36
+t2;Stacking com 90 dias;31.86;19.64;25.75;22.98;19.04
+t2;Stacking com 365 dias;32.01;20.23;26.12;25.83;13.89
+t2;Regimes;32.18;20.12;26.15;28.11;14.68
+t2;Stacking com 180 dias;32.01;20.45;26.23;24.1;17.86
+t2;Residual;33.32;20.65;26.99;23.79;16.75
+t2;SARIMAX;33.95;26.65;30.3;41.6;17.75
+t2;Prophet;41.27;31.32;36.3;30.73;37.39

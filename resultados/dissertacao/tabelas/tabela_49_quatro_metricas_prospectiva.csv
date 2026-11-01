@@ -1,0 +1,9 @@
+﻿Decisão;Alternativa;Datas;MAE;RMSE;WAPE (%);R²
+Preparo (semana seguinte);Consumo de referência;28;13,6;16,9;6,8;0,17
+Preparo (semana seguinte);Mediana do mesmo dia da semana;28;15,4;18,0;7,7;0,05
+Preparo (semana seguinte);Artefato (ExtraTrees);28;13,2;17,1;6,6;0,14
+Preparo (semana seguinte);Quantitativo da nutricionista;28;22,1;30,5;11,1;-1,71
+Preparo (semana seguinte);Híbrido (artefato com quantitativo);28;18,3;24,6;9,2;-0,76
+Compras (daqui a duas semanas);Consumo de referência;28;13,9;17,3;7,0;0,12
+Compras (daqui a duas semanas);Mediana do mesmo dia da semana;28;14,7;17,8;7,4;0,08
+Compras (daqui a duas semanas);Artefato (ExtraTrees);28;13,8;16,7;6,9;0,19

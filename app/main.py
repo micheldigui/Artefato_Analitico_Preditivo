@@ -11,13 +11,15 @@ import pandas as pd
 import streamlit as st
 
 RAIZ = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(RAIZ / "src"))
-from nomes import EVENTOS, TRATAMENTOS  # noqa: E402
+sys.path.insert(0, str(RAIZ / "notebooks"))
+from funcoes.nomes import EVENTOS, TRATAMENTOS  # noqa: E402
 
 PLANEJAMENTO = RAIZ / "resultados" / "planejamento"
 SILVER = RAIZ / "dados" / "silver"
 DECISOES = {"preparo": "Preparo (semana seguinte)", "compras": "Compras (daqui a duas semanas)"}
 OPCOES = {"sem_folga": "Sem margem", "moderada": "Margem moderada", "alta": "Margem alta"}
+REGISTRO = RAIZ / "dados" / "registro_decisoes" / "registro_decisoes.csv"
+MOTIVOS = ["Igual à previsão", "Evento na escola", "Cardápio", "Previsão do tempo", "Prova ou período de avaliação", "Turmas ausentes", "Experiência da semana anterior", "Outro"]
 
 st.set_page_config(page_title="Planejamento de Refeições", layout="wide", initial_sidebar_state="collapsed")
 
@@ -61,7 +63,7 @@ def tabela_da_semana(fichas):
         linha = {"Dia": rotulo_dia(f), "Previsão": f["previsao"], "Margem moderada": f["opcoes"]["moderada"]["refeicoes"], "Margem alta": f["opcoes"]["alta"]["refeicoes"]}
         if f["decisao"] == "preparo":
             linha["Quantitativo"] = f["quantitativo_nutricionista"]
-            linha["Combinação"] = f["combinacao_com_quantitativo"]
+            linha["Híbrido"] = f["combinacao_com_quantitativo"]
         linha["Atenção"] = "Sim" if f["pontos_de_atencao"] else ""
         linhas.append(linha)
     return pd.DataFrame(linhas)
@@ -117,13 +119,31 @@ def mostrar_ficha(ficha, erros):
     st.markdown(f"#### {ficha['dia']}, {pd.Timestamp(ficha['data']).strftime('%d/%m/%Y')}")
     st.markdown(f"**Previsão: {ficha['previsao']} refeições** · {ficha['base_da_previsao']}")
     if ficha["quantitativo_nutricionista"] is not None:
-        st.markdown(f"**Quantitativo da nutricionista:** {ficha['quantitativo_nutricionista']} · **Combinado com a previsão:** {ficha['combinacao_com_quantitativo']}")
+        st.markdown(f"**Quantitativo da nutricionista:** {ficha['quantitativo_nutricionista']} · **Híbrido:** {ficha['combinacao_com_quantitativo']}")
     for ponto in ficha["pontos_de_atencao"]:
         st.warning(ponto)
     mostrar_opcoes(ficha)
     mostrar_contexto(ficha)
     with st.container(border=True):
         mostrar_simulacao(ficha, erros)
+    with st.container(border=True):
+        registrar_decisao(ficha)
+
+
+def registrar_decisao(ficha):
+    st.markdown("**Registrar a decisão**")
+    with st.form(f"registro_{ficha['decisao']}_{ficha['data']}", clear_on_submit=True):
+        quantidade = st.number_input("Quantidade decidida", min_value=0, max_value=600, value=ficha["quantitativo_nutricionista"] or ficha["previsao"], step=5)
+        motivo = st.selectbox("Principal motivo", MOTIVOS)
+        observacao = st.text_input("Observação (opcional)")
+        if st.form_submit_button("Salvar"):
+            linha = pd.DataFrame([{"registrado_em": pd.Timestamp.now().isoformat(timespec="seconds"), "sexta_do_planejamento": ficha["sexta_do_planejamento"], "decisao": ficha["decisao"], "data": ficha["data"],
+                                   "previsao": ficha["previsao"], "quantidade_decidida": quantidade, "motivo": motivo, "observacao": observacao}])
+            REGISTRO.parent.mkdir(parents=True, exist_ok=True)
+            linha.to_csv(REGISTRO, sep=";", index=False, encoding="utf-8-sig", mode="a", header=not REGISTRO.exists())
+            st.success("Decisão registrada.")
+    if REGISTRO.exists():
+        st.download_button("Baixar registros", REGISTRO.read_bytes(), "registro_decisoes.csv", "text/csv")
 
 
 def pagina_planejamento():
@@ -170,7 +190,7 @@ def pagina_historico():
 
 def pagina_confiabilidade():
     st.subheader("Essas opções são confiáveis?")
-    st.write("Comparação entre a chance informada antes de cada semana e o que aconteceu em 2026, sem dias atípicos. Excesso e déficit são potenciais: o restaurante não pesa o que é descartado nem registra quem ficou sem refeição.")
+    st.write("Comparação entre a chance informada antes de cada semana e o que aconteceu de fevereiro a agosto de 2026, sem dias atípicos. Excesso e déficit são potenciais: o restaurante não pesa o que é descartado nem registra quem ficou sem refeição.")
     v = carregar_verificacao()
     d = v[(v["universo"] == "sem_atipicos") & v["opcao"].isin(OPCOES)]
     st.dataframe(pd.DataFrame({
@@ -179,12 +199,17 @@ def pagina_confiabilidade():
         "Erro médio (refeições por dia)": d["erro_medio"].round(1), "Excesso potencial (refeições)": d["a_mais"].round(0).astype(int), "Déficit potencial (refeições)": d["a_menos"].round(0).astype(int),
     }), hide_index=True, width="stretch")
     st.markdown("""
-**O que os testes de 2026 mostraram**
+**O que os testes de fevereiro a agosto de 2026 mostraram**
 
-- O artefato usa a média de CatBoost, KNN e consumo de referência, escolhida com dados de 2024 e 2025.
-- No preparo, o artefato sozinho erra cerca de 26 refeições por dia, e o quantitativo da nutricionista, cerca de 24.
-- O híbrido, que junta os dois, erra cerca de 21 refeições por dia. A diferença para o quantitativo ainda pode ser acaso.
-- Nas compras, com duas semanas de antecedência, o erro fica em torno de 26 refeições por dia.
+- O artefato usa o algoritmo ExtraTrees, escolhido com dados de 2024, 2025 e de fevereiro a agosto de 2026.
+- No preparo, o artefato sozinho erra cerca de 25 refeições por dia, e o quantitativo da nutricionista, cerca de 24.
+- O híbrido, que junta os dois, erra cerca de 20 refeições por dia.
+- Nas compras, com duas semanas de antecedência, o erro fica em torno de 23 refeições por dia.
+
+**Avaliação prospectiva de setembro e outubro de 2026**
+
+- Sem dias atípicos, o erro no preparo foi de cerca de 13 refeições por dia no artefato, 22 no quantitativo e 18 no híbrido.
+- São só 28 dias, então esses números ainda são pouco estáveis.
 
 **Limites**
 

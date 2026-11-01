@@ -1,0 +1,151 @@
+﻿Decisão;Ideia testada;Erro médio em 2024;Erro médio em 2025;Média dos dois anos
+Compras (daqui a duas semanas);Média: KNN C2 tudo + XGBoost C2 1_ano;30,21;19,53;24,87
+Compras (daqui a duas semanas);Média: CatBoost C2 1_ano + KNN C2 tudo;30,61;19,25;24,93
+Compras (daqui a duas semanas);Média: RandomForest C2 1_ano + KNN C2 tudo;30,35;19,57;24,96
+Compras (daqui a duas semanas);Melhor com 50% do consumo de referência;29,79;20,37;25,08
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + KNN C2 tudo;31,02;19,4;25,21
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + KNN C2 tudo;31,04;19,55;25,29
+Compras (daqui a duas semanas);Melhor com 25% do consumo de referência;30,26;20,4;25,33
+Compras (daqui a duas semanas);Média: ExtraTrees C2 tudo + XGBoost C2 1_ano;30,78;19,97;25,38
+Compras (daqui a duas semanas);Média dos 5 melhores;30,94;19,88;25,41
+Compras (daqui a duas semanas);Média: XGBoost C2 1_ano + ExtraTrees C1 tudo;30,85;20,02;25,43
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + ExtraTrees C2 tudo;31,35;19,54;25,44
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + ExtraTrees C2 tudo;31,34;19,58;25,46
+Compras (daqui a duas semanas);Média: CatBoost C2 1_ano + ExtraTrees C2 tudo;31,27;19,65;25,46
+Compras (daqui a duas semanas);Média: CatBoost C2 1_ano + ExtraTrees C1 tudo;31,35;19,68;25,51
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + ExtraTrees C1 tudo;31,42;19,61;25,52
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + ExtraTrees C1 tudo;31,39;19,68;25,53
+Compras (daqui a duas semanas);Média: ExtraTrees C2 tudo + RandomForest C2 1_ano;31,2;20,06;25,63
+Compras (daqui a duas semanas);Média: ExtraTrees C2 tudo + KNN C2 tudo;31,91;19,42;25,67
+Compras (daqui a duas semanas);Média: KNN C2 tudo + ExtraTrees C1 tudo;31,93;19,43;25,68
+Compras (daqui a duas semanas);Média: RandomForest C2 1_ano + ExtraTrees C1 tudo;31,29;20,08;25,69
+Compras (daqui a duas semanas);Média dos 3 melhores;31,07;20,36;25,72
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + CatBoost C2 1_ano;31,24;20,21;25,73
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + CatBoost C2 1_ano;31,24;20,26;25,75
+Compras (daqui a duas semanas);ExtraTrees C1s recencia;31,69;19,83;25,76
+Compras (daqui a duas semanas);ExtraTrees C2s recencia;31,75;19,79;25,77
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + XGBoost C2 1_ano;31,04;20,64;25,84
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + RandomForest C2 1_ano;31,07;20,64;25,86
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + XGBoost C2 1_ano;31,02;20,69;25,86
+Compras (daqui a duas semanas);ExtraTrees C2 recencia;31,62;20,11;25,86
+Compras (daqui a duas semanas);Média: ExtraTrees C2 1_ano + RandomForest C2 1_ano;31,01;20,73;25,87
+Compras (daqui a duas semanas);Torneio: ExtraTrees C1 1_ano;31,08;20,7;25,89
+Compras (daqui a duas semanas);ExtraTrees C1 recencia;31,69;20,13;25,91
+Compras (daqui a duas semanas);Média: ExtraTrees C1 1_ano + ExtraTrees C2 1_ano;31,05;20,81;25,93
+Compras (daqui a duas semanas);Média: CatBoost C2 1_ano + RandomForest C2 1_ano;31,66;20,38;26,02
+Compras (daqui a duas semanas);Torneio: ExtraTrees C2 1_ano;31,11;20,93;26,02
+Compras (daqui a duas semanas);Média: CatBoost C2 1_ano + XGBoost C2 1_ano;31,73;20,49;26,11
+Compras (daqui a duas semanas);ExtraTrees C1s 1_ano;31,5;20,85;26,18
+Compras (daqui a duas semanas);Média: RandomForest C2 1_ano + XGBoost C2 1_ano;31,54;20,86;26,2
+Compras (daqui a duas semanas);Torneio: CatBoost C2 1_ano;32,24;20,19;26,21
+Compras (daqui a duas semanas);ExtraTrees C2s 1_ano;31,82;20,71;26,26
+Compras (daqui a duas semanas);Consumo de referência;31,65;21,02;26,34
+Compras (daqui a duas semanas);Média: ExtraTrees C2 tudo + ExtraTrees C1 tudo;32,34;20,65;26,49
+Compras (daqui a duas semanas);RandomForest C1s 1_ano;33,5;21,06;27,28
+Compras (daqui a duas semanas);RandomForest C1 recencia;33,0;22,05;27,52
+Compras (daqui a duas semanas);RandomForest C2s 1_ano;34,51;20,78;27,65
+Compras (daqui a duas semanas);HistGB C2 recencia;34,23;21,24;27,73
+Compras (daqui a duas semanas);RandomForest C2 recencia;33,65;21,95;27,8
+Compras (daqui a duas semanas);RandomForest C1s recencia;35,0;20,85;27,92
+Compras (daqui a duas semanas);GradientBoosting C2 recencia;34,25;21,67;27,96
+Compras (daqui a duas semanas);RandomForest C2s recencia;35,13;20,88;28,01
+Compras (daqui a duas semanas);GradientBoosting C1s 1_ano;36,06;20,04;28,05
+Compras (daqui a duas semanas);GradientBoosting C2s 1_ano;36,27;19,93;28,1
+Compras (daqui a duas semanas);HistGB C1 recencia;35,47;20,87;28,17
+Compras (daqui a duas semanas);GradientBoosting C1 recencia;35,21;21,18;28,19
+Compras (daqui a duas semanas);HistGB C2s 1_ano;37,22;20,13;28,68
+Compras (daqui a duas semanas);GradientBoosting C1s recencia;37,55;21,03;29,29
+Compras (daqui a duas semanas);HistGB C1s 1_ano;38,88;19,91;29,39
+Compras (daqui a duas semanas);HistGB C2s recencia;38,49;20,63;29,56
+Compras (daqui a duas semanas);GradientBoosting C2s recencia;37,92;21,23;29,57
+Compras (daqui a duas semanas);Ridge C2 recencia;37,35;21,98;29,67
+Compras (daqui a duas semanas);HistGB C1s recencia;39,44;20,26;29,85
+Compras (daqui a duas semanas);Ridge C1 recencia;38,55;21,3;29,92
+Compras (daqui a duas semanas);Huber C1 recencia;39,94;21,6;30,77
+Compras (daqui a duas semanas);Huber C2 recencia;40,07;21,99;31,03
+Compras (daqui a duas semanas);Ridge C1s recencia;42,89;21,43;32,16
+Compras (daqui a duas semanas);Ridge C2s recencia;42,47;22,03;32,25
+Compras (daqui a duas semanas);Ridge C2s 1_ano;44,6;22,29;33,44
+Compras (daqui a duas semanas);Ridge C1s 1_ano;45,04;22,63;33,83
+Compras (daqui a duas semanas);Huber C1s recencia;47,81;22,07;34,94
+Compras (daqui a duas semanas);Huber C2s recencia;48,56;22,57;35,57
+Compras (daqui a duas semanas);Huber C2s 1_ano;53,54;24,2;38,87
+Compras (daqui a duas semanas);Huber C1s 1_ano;53,47;24,29;38,88
+Preparo (semana seguinte);Média: KNN C2 tudo + CatBoost C1 1_ano;25,02;19,2;22,11
+Preparo (semana seguinte);Média dos 3 melhores;25,11;19,2;22,16
+Preparo (semana seguinte);Média dos 5 melhores;25,16;19,29;22,23
+Preparo (semana seguinte);Média: KNN C1 tudo + CatBoost C1 1_ano;25,07;19,39;22,23
+Preparo (semana seguinte);Média: KNN C2 tudo + KNN C2 1_ano;25,62;19,22;22,42
+Preparo (semana seguinte);Média: KNN C2 tudo + CatBoost C2 1_ano;25,82;19,15;22,49
+Preparo (semana seguinte);Média: KNN C1 tudo + KNN C2 1_ano;25,62;19,39;22,51
+Preparo (semana seguinte);Média: KNN C2 tudo + KNN C1 1_ano;25,85;19,17;22,51
+Preparo (semana seguinte);Média: KNN C1 1_ano + XGBoost C1 tudo;25,64;19,41;22,52
+Preparo (semana seguinte);Média: KNN C2 tudo + XGBoost C1 tudo;25,71;19,34;22,52
+Preparo (semana seguinte);Média: KNN C1 1_ano + XGBoost C2 tudo;25,54;19,53;22,54
+Preparo (semana seguinte);Média: CatBoost C1 1_ano + KNN C1 1_ano;25,29;19,79;22,54
+Preparo (semana seguinte);Média: KNN C1 tudo + CatBoost C2 1_ano;25,76;19,33;22,54
+Preparo (semana seguinte);Média: CatBoost C1 1_ano + KNN C2 1_ano;25,29;19,8;22,54
+Preparo (semana seguinte);Média: KNN C2 1_ano + XGBoost C1 tudo;25,63;19,47;22,55
+Preparo (semana seguinte);Média: KNN C2 tudo + XGBoost C2 tudo;25,65;19,45;22,55
+Preparo (semana seguinte);Melhor com 25% do consumo de referência;25,96;19,18;22,57
+Preparo (semana seguinte);Torneio: KNN C2 tudo;26,08;19,06;22,57
+Preparo (semana seguinte);Média: KNN C2 1_ano + XGBoost C2 tudo;25,6;19,57;22,59
+Preparo (semana seguinte);Média: KNN C2 tudo + KNN C1 tudo;26,0;19,18;22,59
+Preparo (semana seguinte);Média: KNN C1 tudo + KNN C1 1_ano;25,83;19,35;22,59
+Preparo (semana seguinte);Média: KNN C1 tudo + XGBoost C1 tudo;25,85;19,52;22,68
+Preparo (semana seguinte);Média: KNN C1 tudo + XGBoost C2 tudo;25,75;19,66;22,7
+Preparo (semana seguinte);Melhor com 50% do consumo de referência;26,05;19,42;22,74
+Preparo (semana seguinte);Média: CatBoost C1 1_ano + XGBoost C1 tudo;25,91;19,59;22,75
+Preparo (semana seguinte);Média: CatBoost C1 1_ano + XGBoost C2 tudo;25,84;19,68;22,76
+Preparo (semana seguinte);Torneio: KNN C1 tudo;26,12;19,42;22,77
+Preparo (semana seguinte);Média: KNN C1 1_ano + CatBoost C2 1_ano;25,86;19,71;22,78
+Preparo (semana seguinte);Média: KNN C2 1_ano + CatBoost C2 1_ano;25,92;19,73;22,82
+Preparo (semana seguinte);Torneio: CatBoost C1 1_ano;26,05;19,92;22,98
+Preparo (semana seguinte);ExtraTrees C2s recencia;26,14;19,84;22,99
+Preparo (semana seguinte);Média: CatBoost C1 1_ano + CatBoost C2 1_ano;26,28;19,77;23,02
+Preparo (semana seguinte);Média: CatBoost C2 1_ano + XGBoost C1 tudo;26,44;19,65;23,04
+Preparo (semana seguinte);Média: CatBoost C2 1_ano + XGBoost C2 tudo;26,51;19,65;23,08
+Preparo (semana seguinte);ExtraTrees C2 recencia;26,19;19,98;23,09
+Preparo (semana seguinte);ExtraTrees C1 recencia;26,31;19,89;23,1
+Preparo (semana seguinte);Média: KNN C2 1_ano + KNN C1 1_ano;26,21;20,13;23,17
+Preparo (semana seguinte);ExtraTrees C1s recencia;26,59;19,86;23,22
+Preparo (semana seguinte);Média: XGBoost C1 tudo + XGBoost C2 tudo;26,55;20,08;23,32
+Preparo (semana seguinte);ExtraTrees C2p 1_ano;27,02;19,92;23,47
+Preparo (semana seguinte);RandomForest C2p 1_ano;27,58;19,54;23,56
+Preparo (semana seguinte);Consumo de referência;26,86;20,3;23,58
+Preparo (semana seguinte);ExtraTrees C2s 1_ano;27,17;20,36;23,77
+Preparo (semana seguinte);RandomForest C1s recencia;27,02;20,91;23,97
+Preparo (semana seguinte);ExtraTrees C1s 1_ano;27,42;20,59;24,0
+Preparo (semana seguinte);RandomForest C1 recencia;26,78;21,29;24,03
+Preparo (semana seguinte);RandomForest C2 recencia;26,81;21,31;24,06
+Preparo (semana seguinte);RandomForest C2s 1_ano;27,85;20,29;24,07
+Preparo (semana seguinte);HistGB C2 recencia;27,3;20,89;24,09
+Preparo (semana seguinte);GradientBoosting C2s 1_ano;28,04;20,17;24,11
+Preparo (semana seguinte);HistGB C1 recencia;27,13;21,2;24,17
+Preparo (semana seguinte);GradientBoosting C2p 1_ano;29,2;19,17;24,19
+Preparo (semana seguinte);RandomForest C1s 1_ano;28,07;20,57;24,32
+Preparo (semana seguinte);RandomForest C2s recencia;27,89;20,86;24,37
+Preparo (semana seguinte);Ridge C2p 1_ano;28,98;19,81;24,39
+Preparo (semana seguinte);GradientBoosting C2s recencia;28,25;20,68;24,47
+Preparo (semana seguinte);GradientBoosting C1 recencia;27,81;21,25;24,53
+Preparo (semana seguinte);GradientBoosting C1s 1_ano;28,58;20,64;24,61
+Preparo (semana seguinte);GradientBoosting C2 recencia;27,92;21,54;24,73
+Preparo (semana seguinte);Ridge C1 recencia;29,24;20,47;24,86
+Preparo (semana seguinte);Ridge C2 recencia;29,35;20,59;24,97
+Preparo (semana seguinte);HistGB C2s recencia;29,02;20,94;24,98
+Preparo (semana seguinte);HistGB C2p 1_ano;30,04;19,94;24,99
+Preparo (semana seguinte);HistGB C1s recencia;28,74;21,3;25,02
+Preparo (semana seguinte);GradientBoosting C1s recencia;28,86;21,19;25,03
+Preparo (semana seguinte);Huber C1 recencia;29,26;20,81;25,04
+Preparo (semana seguinte);Huber C2p 1_ano;31,27;19,86;25,56
+Preparo (semana seguinte);Huber C2 recencia;30,09;21,16;25,63
+Preparo (semana seguinte);HistGB C2s 1_ano;30,9;20,81;25,85
+Preparo (semana seguinte);HistGB C1s 1_ano;31,29;20,85;26,07
+Preparo (semana seguinte);Huber C1s recencia;33,77;21,3;27,53
+Preparo (semana seguinte);Ridge C1s recencia;34,52;20,56;27,54
+Preparo (semana seguinte);Ridge C2s 1_ano;34,59;20,6;27,6
+Preparo (semana seguinte);Ridge C2s recencia;34,68;20,71;27,7
+Preparo (semana seguinte);Ridge C1s 1_ano;35,02;20,7;27,86
+Preparo (semana seguinte);Huber C2s recencia;35,57;21,6;28,59
+Preparo (semana seguinte);Huber C1s 1_ano;41,09;21,6;31,34
+Preparo (semana seguinte);Huber C2s 1_ano;42,35;21,51;31,93

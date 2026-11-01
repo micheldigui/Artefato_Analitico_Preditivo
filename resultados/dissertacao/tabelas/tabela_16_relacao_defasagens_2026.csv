@@ -1,0 +1,20 @@
+﻿Variável;Dias analisados;Relação linear;Relação pela ordem;Relação média por ano
+Mesmo dia, semana passada;99;0,55;0,655;0,55
+Mesmo dia, há 4 semanas;80;0,482;0,533;0,482
+Consumo de 5 dias de serviço atrás;121;0,42;0,475;0,42
+Menor consumo nos últimos 5 dias;121;0,384;0,334;0,384
+Média dos 5 dias anteriores;121;0,383;0,282;0,383
+Mesmo dia, há 2 semanas;95;0,37;0,461;0,37
+Valor central dos 5 dias anteriores;121;0,357;0,246;0,357
+Maior consumo nos últimos 5 dias;121;0,339;0,203;0,339
+Mesmo dia, há 3 semanas;85;0,327;0,411;0,327
+Média dos 10 dias anteriores;121;0,305;0,238;0,305
+Valor central dos 10 dias anteriores;121;0,272;0,228;0,272
+Consumo do dia anterior;121;0,267;0,196;0,267
+Consumo de 2 dias atrás;121;0,253;0,138;0,253
+Consumo de 10 dias de serviço atrás;121;0,189;0,201;0,189
+Consumo de 3 dias atrás;121;0,188;0,093;0,188
+Média dos 20 dias anteriores;121;0,053;0,056;0,053
+Valor central dos 20 dias anteriores;121;0,05;0,058;0,05
+Variação nos 5 dias anteriores;121;-0,108;-0,151;-0,108
+Variação nos 10 dias anteriores;121;-0,236;-0,26;-0,236

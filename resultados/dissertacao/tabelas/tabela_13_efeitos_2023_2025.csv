@@ -1,0 +1,45 @@
+﻿Grupo;Categoria;Dias;Consumo médio;Diferença para o consumo de referência (%)
+Dia da semana;Segunda;96;141,7;0,7
+Dia da semana;Terça;93;135,0;-0,5
+Dia da semana;Quarta;97;143,6;1,6
+Dia da semana;Quinta;95;123,7;-4,1
+Dia da semana;Sexta;92;132,3;-1,1
+Proteína;Carne bovina;162;134,4;-0,1
+Proteína;Carne suína;80;135,8;-1,2
+Proteína;Feijoada;17;137,9;0,6
+Proteína;Frango;169;136,0;1,1
+Proteína;Peixe;22;128,2;-3,5
+Proteína;Proteína mista;22;138,8;0,7
+Forma de preparo;Ao molho ou refogado;122;136,6;-2,0
+Forma de preparo;Assado;81;145,2;0,2
+Forma de preparo;Churrasco ou espeto;25;138,8;-1,1
+Forma de preparo;Cozido ou refogado;55;134,7;1,4
+Forma de preparo;Cremoso ou ensopado;62;126,0;-1,0
+Forma de preparo;Empanado ou à milanesa;38;131,8;-2,2
+Forma de preparo;Frito;4;164,5;8,2
+Forma de preparo;Grelhado;34;134,4;4,3
+Forma de preparo;Massa ou prato montado;51;127,4;-0,2
+Evento;Atividade cultural;11;125,7;-9,5
+Evento;Aula regular;346;135,4;0,7
+Evento;Conselho de classe;3;137,7;-12,4
+Evento;Encerramento de etapa;9;121,2;-19,9
+Evento;Encontro institucional;48;154,1;1,6
+Evento;Evento de portas abertas;2;161,5;-3,9
+Evento;Formação;7;109,4;-1,7
+Evento;Início de etapa;4;99,2;-21,8
+Evento;Matrícula;3;122,0;51,3
+Evento;Ponto facultativo;1;121,0;-27,2
+Evento;Prazo administrativo;11;132,4;-2,2
+Evento;Reunião de apoio ao estudante;8;142,0;0,8
+Evento;Reunião de famílias;7;131,6;-9,7
+Evento;Semana da Consciência Negra;5;99,2;-13,4
+Evento;Semana de Ciência e Tecnologia;8;111,8;-19,7
+Chuva;Sem chuva;209;138,5;-0,9
+Chuva;Até 5 mm;179;134,3;0,7
+Chuva;5 a 15 mm;59;134,4;1,4
+Chuva;Acima de 15 mm;26;118,8;-1,9
+Temperatura máxima;Até 24 °C;158;134,0;-1,1
+Temperatura máxima;24 a 27 °C;131;135,9;-0,8
+Temperatura máxima;27 a 30 °C;112;133,5;1,0
+Temperatura máxima;30 a 33 °C;57;141,2;1,7
+Temperatura máxima;33 °C ou mais;15;136,0;3,8

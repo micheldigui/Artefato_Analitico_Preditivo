@@ -1,0 +1,7 @@
+﻿Caso;26/10;27/10;28/10;29/10;30/10;Erro médio;Viés
+Registro de 24/10;185;170;180;149;155;31,8;-31,8
+Reproduzido com o aplicativo em uso;185;170;181;149;156;31,7;-31,7
+Com os consumos de 19 e 20/10 corrigidos;190;175;185;153;160;27,1;-27,1
+Com as colunas de consumo passado corrigidas;190;181;188;161;165;22,3;-22,3
+Com as duas correções;199;185;191;165;168;18,1;-18,1
+Consumo real;199;192;232;172;203;;

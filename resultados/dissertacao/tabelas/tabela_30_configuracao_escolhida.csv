@@ -1,0 +1,8 @@
+﻿Decisão;Cenário;Algoritmo;Histórico;Erro médio em 2025
+Preparo (semana seguinte);Consumo e calendário;ExtraTrees;Últimos 12 meses;20,6
+Preparo (semana seguinte);Inclui o cardápio;ExtraTrees;Últimos 12 meses;20,65
+Preparo (semana seguinte);Inclui a previsão do tempo;ExtraTrees;Últimos 12 meses;20,7
+Preparo (semana seguinte);Só histórico de consumo;ExtraTrees;Últimos 12 meses;21,16
+Compras (daqui a duas semanas);Consumo e calendário;ExtraTrees;Últimos 12 meses;20,7
+Compras (daqui a duas semanas);Inclui o cardápio;ExtraTrees;Últimos 12 meses;20,93
+Compras (daqui a duas semanas);Só histórico de consumo;ExtraTrees;Últimos 12 meses;21,67

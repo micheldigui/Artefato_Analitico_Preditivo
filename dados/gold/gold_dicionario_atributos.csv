@@ -21,7 +21,7 @@ nivel;coef_variacao_10d;t1 e t2;desvio_10d / nivel_base
 nivel;dispersao_recente;t1 e t2;Desvio absoluto mediano nos 10 dias normais
 nivel;idade_informacao_dias;t1 e t2;"Dias entre o ultimo consumo usado e a emissao; alto apos recessos"
 calendario;dia_seg a dia_sex;t1 e t2;Dia da semana
-calendario;dias_ate_fim_bloco;t1 e t2;Dias letivos ate o fim do bloco, limitado a 15
+calendario;dias_ate_fim_bloco;t1 e t2;"Dias letivos ate o fim do semestre, limitado a 15; pausas com menos de 10 dias uteis nao contam como fim"
 calendario;dias_desde_inicio_bloco;t1 e t2;Dias letivos desde o inicio do bloco, limitado a 15
 calendario;fim_de_bloco, inicio_de_bloco;t1 e t2;"Ate 3 dias do fim; ate 4 dias do inicio"
 calendario;vespera_de_pausa, pos_pausa;t1 e t2;Dia util seguinte ou anterior sem aula

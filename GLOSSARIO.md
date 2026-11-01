@@ -27,7 +27,7 @@ Cada cenário acrescenta uma fonte de dados ao anterior. O artefato usa o mais c
 |---|---|---|
 | **Refeições consumidas (consumo real)** | Total de refeições registrado no dia. | consumo, alvo |
 | **Consumo de referência** | Estimativa feita antes do dia, com o consumo de dias normais recentes e do mesmo dia da semana. Não é o consumo real. | nível base, baseline |
-| **Comitê** | Previsão que junta vários modelos pela média simples. O artefato usa CatBoost, KNN e o consumo de referência. | ensemble |
+| **ExtraTrees** | Modelo congelado do artefato: muitas árvores de decisão com divisões aleatórias, cuja previsão final é a média delas. | ensemble do tipo bagging |
 | **Consumo comparado à referência** | 0% é igual à referência; -10% é 10% abaixo. | consumo relativo, razão |
 | **Período de aulas** | Trecho contínuo de aulas entre recessos ou férias. | bloco letivo |
 | **Quantitativo da nutricionista** | Número de refeições informado por ela para cada dia. | plano, reservas (2026) |

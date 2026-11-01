@@ -1,0 +1,36 @@
+﻿Grupo;Variável;Dias analisados;Relação linear;Relação pela ordem
+Calendário;Últimos dias do período de aulas;473;-0,392;-0,272
+Calendário;Dia com evento fora da rotina;473;-0,161;-0,185
+Calendário;Semana dentro do período de aulas;473;-0,246;-0,176
+Consumo recente;Dias já registrados neste período de aulas;473;-0,252;-0,166
+Consumo recente;Mesmo dia da semana comparado à referência;473;0,186;0,159
+Calendário;Primeiros dias do período de aulas;473;-0,172;-0,145
+Calendário;Dias de aula até o fim do período;473;0,311;0,145
+Clima previsto;Chuva prevista em 3 dias (mm);307;0,186;0,14
+Calendário;Dias sem aula logo antes;473;-0,068;-0,129
+Calendário;Volta depois de dia sem aula;473;-0,113;-0,129
+Consumo recente;Dias desde o último consumo conhecido;473;-0,134;-0,118
+Calendário;Quinta-feira;473;-0,083;-0,113
+Consumo recente;Mesmo dia, duas vezes atrás, comparado à referência;473;0,031;0,108
+Consumo recente;Último consumo comparado à referência;473;0,156;0,105
+Calendário;Quarta-feira;473;0,067;0,099
+Clima que ocorreu;Temperatura máxima que ocorreu;473;0,116;0,085
+Calendário;Dias de aula na semana;473;0,168;0,075
+Clima previsto;Chuva prevista no dia (mm);307;0,11;0,073
+Consumo recente;Instabilidade dos últimos 10 dias;473;0,199;0,07
+Cardápio;Efeito da proteína no consumo;467;-0,043;-0,065
+Calendário;Véspera de dia sem aula;473;-0,081;-0,062
+Consumo recente;Consumo do período de aulas comparado à referência;445;0,111;-0,06
+Clima que ocorreu;Vento máximo que ocorreu;473;-0,081;-0,057
+Cardápio;Efeito do prato no consumo;297;-0,028;-0,05
+Calendário;Efeito do evento no consumo;451;-0,017;-0,043
+Clima previsto;Chuva prevista de manhã (mm);307;0,072;0,042
+Calendário;Sexta-feira;473;-0,002;-0,041
+Calendário;Segunda-feira;473;0,031;0,036
+Consumo recente;Média de 5 dias comparada à referência;473;0,181;0,033
+Clima previsto;Temperatura máxima prevista;307;0,067;0,03
+Calendário;Terça-feira;473;-0,014;0,018
+Clima que ocorreu;Horas de chuva que ocorreram;473;-0,03;-0,017
+Consumo recente;Consumo subindo ou caindo;473;0,081;-0,006
+Clima que ocorreu;Chuva que ocorreu no dia (mm);473;-0,016;0,005
+Cardápio;Efeito do preparo no consumo;465;-0,004;0,004

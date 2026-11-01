@@ -1,0 +1,29 @@
+﻿Período;Dias considerados;Decisão;Alternativa;Comparada com;Datas;Diferença de erro médio;Intervalo de 95%, início;Intervalo de 95%, fim
+Fevereiro a agosto de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Consumo de referência;121;-6,7;-12,4;-2,9
+Fevereiro a agosto de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Mediana do mesmo dia da semana;121;-4,1;-10,8;0,6
+Fevereiro a agosto de 2026;Sem atípicos;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Mediana do mesmo dia da semana;121;-8,2;-15,4;-2,4
+Fevereiro a agosto de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Quantitativo da nutricionista;121;0,5;-5,4;6,2
+Fevereiro a agosto de 2026;Sem atípicos;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Quantitativo da nutricionista;121;-3,7;-7,1;-0,2
+Fevereiro a agosto de 2026;Sem atípicos;Compras (daqui a duas semanas);Artefato (ExtraTrees);Consumo de referência;121;-8,2;-14,3;-4,3
+Fevereiro a agosto de 2026;Sem atípicos;Compras (daqui a duas semanas);Artefato (ExtraTrees);Mediana do mesmo dia da semana;121;-5,6;-11,9;-1,9
+Fevereiro a agosto de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Consumo de referência;123;-6,5;-12,1;-2,8
+Fevereiro a agosto de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Mediana do mesmo dia da semana;123;-4,1;-10,7;0,6
+Fevereiro a agosto de 2026;Todos os dias;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Mediana do mesmo dia da semana;123;-8,2;-15,3;-2,5
+Fevereiro a agosto de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Quantitativo da nutricionista;123;0,7;-5,2;6,4
+Fevereiro a agosto de 2026;Todos os dias;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Quantitativo da nutricionista;123;-3,4;-6,9;-0,0
+Fevereiro a agosto de 2026;Todos os dias;Compras (daqui a duas semanas);Artefato (ExtraTrees);Consumo de referência;123;-7,9;-13,8;-4,1
+Fevereiro a agosto de 2026;Todos os dias;Compras (daqui a duas semanas);Artefato (ExtraTrees);Mediana do mesmo dia da semana;123;-5,5;-11,7;-1,9
+Setembro e outubro de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Consumo de referência;28;-0,4;-4,3;3,4
+Setembro e outubro de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Mediana do mesmo dia da semana;28;-2,1;-5,7;1,7
+Setembro e outubro de 2026;Sem atípicos;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Mediana do mesmo dia da semana;28;2,9;-5,2;11,6
+Setembro e outubro de 2026;Sem atípicos;Preparo (semana seguinte);Artefato (ExtraTrees);Quantitativo da nutricionista;28;-8,9;-23,4;2,2
+Setembro e outubro de 2026;Sem atípicos;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Quantitativo da nutricionista;28;-3,9;-9,1;0,2
+Setembro e outubro de 2026;Sem atípicos;Compras (daqui a duas semanas);Artefato (ExtraTrees);Consumo de referência;28;-0,2;-3,6;3,1
+Setembro e outubro de 2026;Sem atípicos;Compras (daqui a duas semanas);Artefato (ExtraTrees);Mediana do mesmo dia da semana;28;-1,0;-5,4;3,3
+Setembro e outubro de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Consumo de referência;33;-0,4;-3,6;2,9
+Setembro e outubro de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Mediana do mesmo dia da semana;33;-1,5;-4,7;1,7
+Setembro e outubro de 2026;Todos os dias;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Mediana do mesmo dia da semana;33;3,9;-2,7;11,0
+Setembro e outubro de 2026;Todos os dias;Preparo (semana seguinte);Artefato (ExtraTrees);Quantitativo da nutricionista;33;-9,2;-21,5;-0,1
+Setembro e outubro de 2026;Todos os dias;Preparo (semana seguinte);Híbrido (artefato com quantitativo);Quantitativo da nutricionista;33;-3,8;-8,3;-0,4
+Setembro e outubro de 2026;Todos os dias;Compras (daqui a duas semanas);Artefato (ExtraTrees);Consumo de referência;33;0,3;-2,4;2,9
+Setembro e outubro de 2026;Todos os dias;Compras (daqui a duas semanas);Artefato (ExtraTrees);Mediana do mesmo dia da semana;33;0,5;-3,3;4,3

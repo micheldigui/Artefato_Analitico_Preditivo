@@ -1,0 +1,11 @@
+﻿Dias considerados;Alternativa;Datas;Erro médio;Excesso potencial;Déficit potencial
+Sem dias atípicos;Consumo de referência;28;13,6;194;188
+Sem dias atípicos;Mediana do mesmo dia da semana;28;15,4;210;220
+Sem dias atípicos;Artefato (ExtraTrees);28;13,2;214;156
+Sem dias atípicos;Quantitativo da nutricionista;28;22,1;289;331
+Sem dias atípicos;Híbrido (artefato com quantitativo);28;18,3;244;268
+Todos os dias;Consumo de referência;33;30,7;824;188
+Todos os dias;Mediana do mesmo dia da semana;33;31,8;830;220
+Todos os dias;Artefato (ExtraTrees);33;30,3;843;156
+Todos os dias;Quantitativo da nutricionista;33;39,5;972;331
+Todos os dias;Híbrido (artefato com quantitativo);33;35,7;911;268

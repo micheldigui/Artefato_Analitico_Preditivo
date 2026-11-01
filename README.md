@@ -23,114 +23,74 @@ Para o Streamlit Community Cloud, o arquivo principal é `app/main.py`.
 
 **Estado atual:** Bronze, Silver e Gold prontas, cenários avaliados, fichas de decisão geradas e aplicativo pronto. Os CSVs da pasta de dados são a fonte dos valores.
 
-Tudo que a gestora e a nutricionista leem segue o [GLOSSARIO.md](GLOSSARIO.md). Tabelas, figuras e telas devem usar `src/nomes.py`, e os nomes técnicos ficam só no código.
+Tudo que a gestora e a nutricionista leem segue o [GLOSSARIO.md](GLOSSARIO.md). Tabelas, figuras e telas devem usar `notebooks/funcoes/nomes.py`, e os nomes técnicos ficam só no código.
 
 ## Estrutura
 
 | Pasta | Conteúdo |
 |---|---|
-| `dados/bronze/` | Cópia exata dos brutos, com hashes em `manifesto.json`. `clima_previsoes/` guarda as previsões do tempo arquivadas. |
+| `dados/bronze/` | Fontes do projeto, com hashes em `manifesto.json` e nomes de eventos anonimizados. `clima_previsoes/` guarda as previsões do tempo arquivadas. |
 | `dados/silver/` | Fontes padronizadas, `silver_fato_diaria` e classificação dos dias. |
 | `dados/gold/` | `gold_t1` (preparo), `gold_t2` (compras) e `gold_dicionario_atributos.csv`. |
-| `src/` | Scripts de cada camada. |
-| `notebooks/` | `01_bronze_silver_qualidade_e_atipicos`, `02_gold_atributos_por_emissao`, `03_analise_exploratoria_variaveis` e `04_resultados_cenarios`, executados. |
-| `resultados/figuras/` | Figuras geradas pelo notebook. |
+| `notebooks/` | Pipeline completo, em ordem, do dado à figura. |
+| `notebooks/funcoes/` | Código do pipeline, um assunto por arquivo. |
+| `resultados/` | Modelos, comparações, fichas, figuras e previsões guardadas. |
+| `app/` | Aplicação Streamlit. |
+
+### Onde mudar cada coisa
+
+| Arquivo | Assunto |
+|---|---|
+| `configuracao.py` | Caminhos, cenários, regras gerais e versão congelada |
+| `nomes.py` | Nomes mostrados em tabelas, figuras e telas |
+| `dados.py` | Leitura das fontes, Silver e coleta do clima |
+| `atipicos.py` | Regras de dias atípicos |
+| `atributos.py` | Camada Gold |
+| `modelos.py` | Algoritmos, modelo congelado e previsão de uma sexta-feira |
+| `validacao.py` | Walk-forward, métricas e comparações |
+| `experimentos.py` | Torneio e ideias de melhoria |
+| `margens.py` | Margens de segurança e fichas de decisão |
+| `figuras.py` | Figuras e tabelas |
+| `verificacoes.py` | Testes de vazamento e conferências |
 
 ## Como reproduzir
 
-A partir da raiz do projeto, em ordem:
+Execute os notebooks em ordem, de `02` a `10`, ou rode `99_executar_tudo.ipynb`. Etapas demoradas reaproveitam resultados salvos. Para refazer tudo, use `RECALCULAR = True` nos notebooks 05, 06 e 07. A execução completa leva cerca de 35 minutos.
 
-```bash
-python src/copiar_bronze.py
-```
+| Notebook | Etapa |
+|---|---|
+| `01_coleta_previsoes_clima` | Coleta semanal, feita manualmente |
+| `02_bronze_silver` | Silver e dias atípicos |
+| `03_gold` | Gold e teste de vazamento dos dados |
+| `04_analise_exploratoria` | Relação das variáveis com o consumo |
+| `05_torneio_de_algoritmos` | Quinze algoritmos |
+| `06_experimentos_de_melhoria` | Histórico, cardápio, stacking, regimes, SARIMAX e Prophet |
+| `07_cenarios_e_resultados` | Walk-forward do modelo congelado e teste de vazamento dos modelos |
+| `08_planejamentos_e_margens` | Comparação anual, margens, fichas e guarda das previsões |
+| `09_figuras_e_tabelas` | Todas as figuras e tabelas da dissertação, geradas e mostradas na ordem da apresentação à banca |
+| `10_revisao` | Conferências independentes |
+| `11_diagnostico_outubro` | Previsões enviadas em outubro e causa do erro de 26 a 30/10; roda antes do 09 |
+| `12_galeria_figuras_e_tabelas` | Galeria gerada pelo notebook 09 |
 
-```bash
-python src/coletar_previsoes_clima.py
-```
+A coleta de previsões do tempo precisa de `config_local.json`, criado a partir de `config_local.exemplo.json`.
 
-```bash
-python src/processar_silver.py
-```
-
-```bash
-python src/detectar_atipicos.py
-```
-
-```bash
-python src/processar_gold.py
-```
-
-```bash
-python src/testar_gold.py
-```
-
-```bash
-python src/montar_notebook_silver.py
-```
-
-```bash
-python src/montar_notebook_gold.py
-```
-
-```bash
-python src/montar_notebook_eda.py
-```
-
-```bash
-python src/testar_modelagem.py
-```
-
-```bash
-python src/avaliar_cenarios.py
-```
-
-```bash
-python src/avaliar_janelas_treino.py
-```
-
-```bash
-python src/consolidar_resultados.py
-```
-
-```bash
-python src/montar_notebook_resultados.py
-```
-
-```bash
-python src/decidir_margens.py
-```
-
-```bash
-python src/montar_notebook_decisao.py
-```
-
-```bash
-python src/comparar_planejamentos.py
-```
-
-```bash
-python src/revisar_resultados.py
-```
-
-```bash
-python src/gerar_figuras_tabelas.py
-```
-
-A coleta de previsões do tempo precisa de `config_local.json`, criado a partir de `config_local.exemplo.json` com a localização da instituição.
+Os arquivos de `dados/referencia_dissertacao/outubro/` são recortes do registro de produção, do consumo no aplicativo e da base de treino de outubro de 2026, com só as linhas e colunas usadas no notebook 11.
 
 ## Camada de decisão
 
-`decidir_margens.py` gera três opções de margem de segurança e uma ficha por dia em `resultados/planejamento/`. As margens de segurança usam os erros dos últimos 60 dias conhecidos em cada sexta-feira. A ficha reúne calendário, cardápio, previsão do tempo, histórico, dias parecidos e pontos de atenção. O artefato não escolhe a opção.
+`margens.py` gera três opções de margem de segurança e uma ficha por dia em `resultados/planejamento/`. A margem usa os erros de dias parecidos nos últimos 12 meses, conhecidos em cada sexta-feira. A ficha reúne calendário, cardápio, previsão do tempo, histórico, dias parecidos e pontos de atenção. O artefato não escolhe a opção. A aplicação registra a quantidade decidida e o motivo em `dados/registro_decisoes/`, fora do Git.
 
-`gerar_valor_potencial.py` gera, em `resultados_locais/`, as tabelas e figuras com valores em reais. A pasta e o `config_local.json` ficam fora do Git.
+`figuras.py` gera, em `resultados_locais/`, as tabelas e figuras com valores em reais. A pasta e o `config_local.json` ficam fora do Git.
 
 ## Avaliação dos cenários
 
-- A cada sexta-feira, os modelos aprendem só com dias anteriores. `testar_modelagem.py` embaralha o futuro e exige previsão idêntica.
-- Modelo e histórico foram escolhidos com 2024 e 2025. 2026 só mede o resultado, mesmo quando outra combinação foi melhor na prova.
+As métricas são as da dissertação: MAE, RMSE, WAPE e R².
+
+- A cada sexta-feira, os modelos aprendem só com dias anteriores. O notebook 07 embaralha o futuro e exige previsão idêntica.
+- Modelo e histórico foram escolhidos com 2024, 2025 e fevereiro a agosto de 2026, período de desenvolvimento. Setembro e outubro ficam na avaliação prospectiva.
 - Parâmetros fixos, sem ajuste nos dados de avaliação.
 - O quantitativo e as reservas não entram nos modelos. No cenário 4, combinam-se depois com a previsão, com peso definido pelos erros recentes.
-- Campeã: média simples de CatBoost, KNN e consumo de referência, com cenário 2 e os últimos 12 meses, no preparo e nas compras. Sem cardápio, usa o cenário 1. Previsões são arredondadas para refeições inteiras. Detalhes em `REVISAO.md`, `resultados/modelos/` e `notebooks/04_resultados_cenarios.ipynb`.
+- Modelo congelado: ExtraTrees com cenário 2 e os últimos 12 meses, no preparo e nas compras. Com quantitativo, híbrido adaptativo. Sem cardápio, usa o cenário 1. Previsões são arredondadas para refeições inteiras. Detalhes em `REVISAO.md`, `resultados/modelos/` e `notebooks/04_resultados_cenarios.ipynb`.
 
 ## Decisões da Silver
 
@@ -176,7 +136,7 @@ A avaliação dos modelos deve sair sempre com e sem os atípicos, para que a ex
 - As colunas `previsao_` trazem a previsão de tempo disponível na sexta-feira.
 - Defasagens usam as últimas ocorrências conhecidas na emissão. "Mesmo dia há 1 ocorrência" pode ser mais antigo que sete dias, porque a sexta-feira de emissão ainda não tem consumo fechado.
 - Efeitos de cardápio e de evento são médias do consumo relativo calculadas só com datas anteriores à emissão, suavizadas para grupos pequenos.
-- `testar_gold.py` também rejeita valores infinitos, colunas constantes e dias de treino sem consumo.
+- O teste do notebook 03 também rejeita valores infinitos, colunas constantes e dias de treino sem consumo.
 - `gold_dicionario_atributos.csv` descreve cada coluna e quando ela está disponível.
 
 ## Previsão do tempo
@@ -186,7 +146,7 @@ A avaliação dos modelos deve sair sempre com e sem os atípicos, para que a ex
 | Preparo (t+1) | Previous Runs, 1 a 7 dias antes | Desde janeiro de 2024 | Testar como atributo do modelo |
 | Compras (t+2) | Single Runs, rodada de 16 dias (GFS e ECMWF) | 31 sextas-feiras, desde 03/04/2026 | Só informativo; pouca relação com a chuva real |
 
-`dados/bronze/clima_previsoes/` guarda as rodadas. **O serviço Single Runs mantém um período curto: `coletar_previsoes_clima.py` deve rodar toda semana**, e cada execução preserva o que já foi salvo.
+`dados/bronze/clima_previsoes/` guarda as rodadas. **O serviço Single Runs mantém um período curto: a coleta do notebook 01 deve rodar toda semana**, e cada execução preserva o que já foi salvo.
 
 Em t+1, usa-se uma rodada anterior à emissão quando a antecedência permite. Como o serviço vai até 7 dias, a sexta-feira prevista usa a rodada de 7 dias antes, cujas horas finais podem superar levemente o horário de emissão.
 - A base não registra quando cada cardápio foi publicado, então t+2 deve ser avaliado com e sem esses atributos.
