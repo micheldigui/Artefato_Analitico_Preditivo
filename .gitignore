@@ -5,8 +5,5 @@ __pycache__/
 catboost_info/
 .claude/
 
-# Localizacao da instituicao, mantida fora do repositorio
-config_local.json
-
 resultados_locais/
 dados/registro_decisoes/
